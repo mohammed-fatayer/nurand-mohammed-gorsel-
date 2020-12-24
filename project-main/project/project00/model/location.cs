@@ -10,11 +10,14 @@ namespace project00.Model
     {
         int locationID;
         string address;
+        int accommodationID;
 
-        public location(int locationID, string address)
+        public location(int locationID,
+            string address, int accommodationID)
         {
             this.locationID = locationID;
             this.address = address;
+            this.accommodationID = accommodationID;
         }
     }
 }

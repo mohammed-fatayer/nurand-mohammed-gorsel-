@@ -17,7 +17,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CD43190E-2661-43B3-A50D-713A98020124}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>project00</RootNamespace>
     <AssemblyName>project00</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="accommodation\accommodationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accommodation\accommodationForm.Designer.cs">
+      <DependentUpon>accommodationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="customer\customerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,22 +76,18 @@
     <Compile Include="customer\showForm.Designer.cs">
       <DependentUpon>showForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="house\houseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="house\houseForm.Designer.cs">
-      <DependentUpon>houseForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="location\locationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="location\locationForm.Designer.cs">
       <DependentUpon>locationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\accommodatin.cs" />
+    <Compile Include="model\payment.cs" />
     <Compile Include="model\person.cs" />
     <Compile Include="model\customer.cs" />
     <Compile Include="model\location.cs" />
-    <Compile Include="model\rentalHouse.cs" />
+    <Compile Include="model\registeration.cs" />
     <Compile Include="ownerforms\oaddform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,16 +113,22 @@
     <Compile Include="localforms\loginform.Designer.cs">
       <DependentUpon>loginform.cs</DependentUpon>
     </Compile>
+    <Compile Include="payment\paymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment\paymentForm.Designer.cs">
+      <DependentUpon>paymentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="accommodation\accommodationForm.resx">
+      <DependentUpon>accommodationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="customer\customerForm.resx">
       <DependentUpon>customerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="customer\showForm.resx">
       <DependentUpon>showForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="house\houseForm.resx">
-      <DependentUpon>houseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="localforms\massageform.resx">
       <DependentUpon>massageform.cs</DependentUpon>
@@ -136,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="localforms\loginform.resx">
       <DependentUpon>loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment\paymentForm.resx">
+      <DependentUpon>paymentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
