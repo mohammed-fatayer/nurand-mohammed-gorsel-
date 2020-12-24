@@ -1,4 +1,4 @@
-﻿using project00.house;
+﻿using project00.accommodation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,10 +47,6 @@ namespace project00.customer
             comboBox1.Text = null;
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            houseForm form = new houseForm();
-            form.ShowDialog();
-        }
+    
     }
 }
