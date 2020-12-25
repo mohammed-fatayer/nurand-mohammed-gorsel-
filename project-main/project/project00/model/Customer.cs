@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using project00.Models;
 using System.Data;
-
 namespace project00.Models
 {
     class Customer:Person

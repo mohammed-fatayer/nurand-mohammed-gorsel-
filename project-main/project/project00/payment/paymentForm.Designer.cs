@@ -1,4 +1,4 @@
-﻿namespace project00.payment
+﻿namespace project00
 {
     partial class paymentForm
     {
@@ -83,10 +83,10 @@
             this.groupBox1.Controls.Add(this.tbLocation);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(29, 23);
+            this.groupBox1.Location = new System.Drawing.Point(8, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(743, 405);
-            this.groupBox1.TabIndex = 5;
+            this.groupBox1.Size = new System.Drawing.Size(785, 433);
+            this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Payment Details";
             // 

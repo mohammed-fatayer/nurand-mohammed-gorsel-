@@ -1,5 +1,4 @@
-﻿using project00.accommodation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace project00.customer
+namespace project00
 {
     public partial class customerForm : Form
     {
         public customerForm()
         {
             InitializeComponent();
+        }
+
+        private void customerForm_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,12 +34,6 @@ namespace project00.customer
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            showForm sform = new showForm();
-            sform.Show();
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             tbName.Text = null;
@@ -47,6 +45,10 @@ namespace project00.customer
             comboBox1.Text = null;
         }
 
-    
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            //showForm sform = new showForm();
+            //sform.Show();
+        }
     }
 }

@@ -1,11 +1,9 @@
-﻿using project00.accommodation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using project00.Models;
-
 
 namespace project00
 {
@@ -26,7 +24,7 @@ namespace project00
             /////////////
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loginform());
+            Application.Run(new customerForm());
            
            
         }

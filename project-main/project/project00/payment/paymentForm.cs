@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace project00.payment
+namespace project00
 {
     public partial class paymentForm : Form
     {

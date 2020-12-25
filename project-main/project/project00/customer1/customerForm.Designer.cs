@@ -1,4 +1,4 @@
-﻿namespace project00.customer
+﻿namespace project00
 {
     partial class customerForm
     {
@@ -81,9 +81,10 @@
             this.groupBox1.Location = new System.Drawing.Point(34, 60);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(733, 365);
-            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Deatails";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // linkLabel1
             // 
@@ -94,7 +95,6 @@
             this.linkLabel1.TabIndex = 23;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Go to house";
-            
             // 
             // button3
             // 
@@ -114,7 +114,6 @@
             this.button2.TabIndex = 21;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
@@ -276,7 +275,7 @@
             this.label1.Location = new System.Drawing.Point(222, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(330, 31);
-            this.label1.TabIndex = 9;
+            this.label1.TabIndex = 11;
             this.label1.Text = "Add Customer Information";
             // 
             // customerForm
@@ -287,7 +286,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "customerForm";
-            this.Text = "Form1";
+            this.Text = "customerForm";
+            this.Load += new System.EventHandler(this.customerForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

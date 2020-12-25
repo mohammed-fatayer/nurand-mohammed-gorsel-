@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -81,9 +81,9 @@
             // listView2
             // 
             this.listView2.HideSelection = false;
-            listViewItem3.ToolTipText = "houses list";
+            listViewItem1.ToolTipText = "houses list";
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem1});
             this.listView2.Location = new System.Drawing.Point(168, 120);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(213, 282);
@@ -119,6 +119,7 @@
             this.Name = "ownerform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.ownerform_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

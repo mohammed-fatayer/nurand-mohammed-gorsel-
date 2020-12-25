@@ -1,4 +1,4 @@
-﻿namespace project00.location
+﻿namespace project00
 {
     partial class locationForm
     {
@@ -50,7 +50,7 @@
             this.groupBox1.Location = new System.Drawing.Point(45, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(710, 385);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Location Details";
             // 
@@ -62,7 +62,6 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -113,7 +112,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Name = "locationForm";
-            this.Text = "Form1";
+            this.Text = "locationForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

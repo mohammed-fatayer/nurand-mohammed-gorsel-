@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace project00.location
+namespace project00
 {
     public partial class locationForm : Form
     {
         public locationForm()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            tbLocation.Text = null;
-            richTbAddress.Text = null;
         }
     }
 }

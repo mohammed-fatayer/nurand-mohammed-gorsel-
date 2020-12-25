@@ -27,5 +27,10 @@ namespace project00
             this.Hide();
           
         }
+
+        private void ownerform_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

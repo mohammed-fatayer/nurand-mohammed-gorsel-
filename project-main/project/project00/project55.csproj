@@ -66,17 +66,11 @@
     <Compile Include="accommodation\accommodationForm.Designer.cs">
       <DependentUpon>accommodationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="customer\customerForm.cs">
+    <Compile Include="customer1\customerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="customer\customerForm.Designer.cs">
+    <Compile Include="customer1\customerForm.Designer.cs">
       <DependentUpon>customerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="customer\showForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="customer\showForm.Designer.cs">
-      <DependentUpon>showForm.cs</DependentUpon>
     </Compile>
     <Compile Include="localforms\loginform.cs">
       <SubType>Form</SubType>
@@ -126,11 +120,8 @@
     <EmbeddedResource Include="accommodation\accommodationForm.resx">
       <DependentUpon>accommodationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="customer\customerForm.resx">
+    <EmbeddedResource Include="customer1\customerForm.resx">
       <DependentUpon>customerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="customer\showForm.resx">
-      <DependentUpon>showForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="localforms\massageform.resx">
       <DependentUpon>massageform.cs</DependentUpon>
