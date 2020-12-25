@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace project00.Model
+namespace project00.Models
 {
-    class Person
+   abstract class Person
     {
         protected string firstname;
         protected string lastname;
@@ -42,45 +42,8 @@ namespace project00.Model
         {
             Console.WriteLine($"name{firstname},lastname{lastname}");
         }
-        public virtual void login(string firstname, string password)
-        {
-
-
-            try
-            {
-                string connectionstring = "Server = DESKTOP-QB99BRD; Database = sms; Trusted_Connection = True;";
-                SqlConnection connection = new SqlConnection(connectionstring);
-                connection.Open();
-                if (connection.State == System.Data.ConnectionState.Open)
-                {
-                    string squery = $"select *from owner where firstname = {firstname}and Password = {password}";
-                    SqlCommand sqlCommand = new SqlCommand(squery, connection);
-                    DataTable dt = new DataTable();
-                    SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
-                    adapter.Fill(dt);
-                    if (dt.Rows.Count > 0)
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
-                }
-                else
-                {
-                    throw new Exception("cant connect to sql database");
-                }
-
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception("error in login.");
-            }
-
-        }
-
+        public abstract Person Login(string firstname, string password);
+        
         public void logout(Person p)
         {
             try

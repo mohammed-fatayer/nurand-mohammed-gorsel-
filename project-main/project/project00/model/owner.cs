@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace project00.Model
+namespace project00.Models
 {
     internal class owner : Person
     {
@@ -27,50 +27,57 @@ namespace project00.Model
             this.address = address;
         }
 
-
+        public int Name { get; private set; }
 
         public void display()
         {
             Console.WriteLine($"ID{ownerID},name{firstname}");
         }
-        public override void login(string firstname, string password)
+        public override Person Login(string firstname, string password)
         {
 
-            /*  try
-              {
-                  string connectionstring = "Server = DESKTOP-QB99BRD; Database = sms; Trusted_Connection = True;";
-                  SqlConnection connection = new SqlConnection(connectionstring);
-                  connection.Open();
-                  if (connection.State == System.Data.ConnectionState.Open)
-                  {
-                      string squery = $"select *from owner where firstname = {firstname}and Password = {password}";
-                      SqlCommand sqlCommand = new SqlCommand(squery, connection);
-                      DataTable dt = new DataTable();
-                      SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
-                      adapter.Fill(dt);
-                      if (dt.Rows.Count > 0)
-                      {
 
-                      }
-                      else
-                      {
 
-                      }
-                  }
-                  else
-                  {
-                      throw new Exception("cant connect to sql database");
-                  }
+            try
+            {
+                string connectionstring = "Server = DESKTOP-QB99BRD; Database = sms; Trusted_Connection = True;";
+                SqlConnection connection = new SqlConnection(connectionstring);
+                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    string squery = $"select OwnerID,firstname+' '+lastname name,Gender,Email,Address from owner " +
+                        $"where firstname = '{firstname}' and Password = '{password}'";
+                    SqlCommand sqlCommand = new SqlCommand(squery, connection);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+                    adapter.Fill(dt);
+                    if (dt.Rows.Count > 0)
+                    {
+                        owner o = new owner();
+                        o.ownerID = int.Parse( dt.Rows[0][ownerID].ToString());
+                        o.firstname = dt.Rows[0]["name"].ToString();
+                        o.Email = dt.Rows[0]["Email"].ToString();
+                        o.gender = dt.Rows[0]["Gender"].ToString();
+                        o.address = dt.Rows[0]["Address"].ToString();
+                        return o;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                else
+                {
+                    throw new Exception("cant connect to sql database");
 
-              }
-              catch (Exception ex)
-              {
+                }
 
-                  throw new Exception("error in login.");
-              }
-          
-            */
-
+            }
+            catch (Exception ex)
+            {
+                
+                throw new Exception("error in login.");
+            }
         }
 
        

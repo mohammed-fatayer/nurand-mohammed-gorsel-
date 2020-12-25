@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace project00.Model
+namespace project00.Models
 {
     public class accommodation
     {

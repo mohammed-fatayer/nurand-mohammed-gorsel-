@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using project00.Model;
+using project00.Models;
 namespace project00
 {
     public partial class loginform : Form
@@ -18,25 +18,26 @@ namespace project00
         public loginform()
         {
             InitializeComponent();
-            con.ConnectionString = @"Data Source=DESKTOP-QB99BRD;Initial Catalog=sms;Integrated Security=True";
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try 
             {
+                string firstname = textBox2.Text.Trim();
+                string password = textBox1.Text.Trim();
                 if (comboBox1.Text == "owner")
                 {
-                    string firstname = textBox2.Text.Trim();
-                    string password = textBox1.Text.Trim();
+                   
                     textBox2.Text = textBox2.Text.Replace(" ", "");
                     if (textBox2.Text != "" && textBox1.Text != "")
                     {
 
                         owner o = new owner();
-                          o.login(firstname, password);
-                      
-
+                       var result = o.Login(firstname, password);
+                        if (result != null) 
+                       
                         {
                             label3.ForeColor = Color.Green;
                             label3.Text = ("you are in");
@@ -44,78 +45,32 @@ namespace project00
                             ownerform oform = new ownerform();
                             oform.Show();
                         }
-                       
-                       
-
 
                     }
-                    else
-                    {
-                        label3.ForeColor = Color.Red;
-                        label3.Text = ("wrong information or missing");
-
-                    }
+                
                     
                 }
                 else
                 {
                     Customer c = new Customer();
-                    c.login(textBox2.Text, textBox1.Text);
+                    var result = c.Login(firstname, password);
+                   // label3.ForeColor = Color.Green;
+                   // label3.Text = ("you are in");
+                   // this.Hide();
+                    label3.ForeColor = Color.Red;
+                    label3.Text = ("check the customer form not working");
+
                 }
+
 
             }
             catch (Exception ex)
             {
+               
                 MessageBox.Show(ex.Message);
+               
             }
-            /*
-                if (comboBox1.Text == "owner")
-                {
-
-
-                    textBox2.Text = textBox2.Text.Replace(" ", "");
-                    if (textBox2.Text == Name && textBox1.Text == password && comboBox1.Text == "owner")
-                    {
-                        label3.ForeColor = Color.Green;
-                        label3.Text = ("you are in");
-                        this.Hide();
-                        ownerform oform = new ownerform();
-                        oform.Show();
-
-
-                    }
-                    else
-                    {
-                        label3.ForeColor = Color.Red;
-                        label3.Text = ("wrong information or missing");
-
-                    }
-
-
-                }
-                else
-                {
-
-                    textBox2.Text = textBox2.Text.Replace(" ", "");
-                    if (textBox2.Text == Name && textBox1.Text == password && comboBox1.Text == "owner")
-                    {
-                        label3.ForeColor = Color.Green;
-                        label3.Text = ("you are in");
-                        this.Hide();
-                        ownerform oform = new ownerform();
-                        oform.Show();
-
-
-                    }
-                    else
-                    {
-                        label3.ForeColor = Color.Red;
-                        label3.Text = ("wrong information or missing");
-
-                    }
-
-            }
-                */
+          
         }
 
         private void button2_Click(object sender, EventArgs e)
