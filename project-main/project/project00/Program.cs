@@ -19,18 +19,14 @@ namespace project00
         static void Main(string[] args)
         {
 
-            owner o = new owner();
-            Customer c = new Customer();
-            Person p = new Person();
-            p.Firstname = "ali";
-            p.Lastname = "ahmed";
-            p.login("ali", "1234");
-            Console.WriteLine(p.Firstname);
+
+            
+           
             
             /////////////
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ownerform());
+            Application.Run(new loginform());
            
            
         }

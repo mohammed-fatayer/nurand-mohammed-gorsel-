@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace project00.Model
 {
@@ -43,23 +45,40 @@ namespace project00.Model
         public virtual void login(string firstname, string password)
         {
 
+
             try
             {
-                if (firstname == "ali" && password == "1234")
+                string connectionstring = "Server = DESKTOP-QB99BRD; Database = sms; Trusted_Connection = True;";
+                SqlConnection connection = new SqlConnection(connectionstring);
+                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Open)
                 {
-                    Console.WriteLine("welcome back");
+                    string squery = $"select *from owner where firstname = {firstname}and Password = {password}";
+                    SqlCommand sqlCommand = new SqlCommand(squery, connection);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+                    adapter.Fill(dt);
+                    if (dt.Rows.Count > 0)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("check information");
+                    throw new Exception("cant connect to sql database");
                 }
+
             }
             catch (Exception ex)
             {
 
                 throw new Exception("error in login.");
             }
-            
+
         }
 
         public void logout(Person p)
