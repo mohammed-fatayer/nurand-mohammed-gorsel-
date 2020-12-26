@@ -24,7 +24,7 @@ namespace project00
             /////////////
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new  AccommodationManagementSystem());
+            Application.Run(new  loginform());
            
            
         }

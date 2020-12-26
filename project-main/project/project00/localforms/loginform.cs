@@ -54,11 +54,11 @@ namespace project00
                 {
                     Customer c = new Customer();
                     var result = c.Login(firstname, password);
-                   // label3.ForeColor = Color.Green;
-                   // label3.Text = ("you are in");
-                   // this.Hide();
-                    label3.ForeColor = Color.Red;
-                    label3.Text = ("check the customer form not working");
+                    label3.ForeColor = Color.Green;
+                    label3.Text = ("you are in");
+                    this.Hide();
+                    customerForm oform = new customerForm();
+                    oform.Show();
 
                 }
 

@@ -40,7 +40,7 @@ namespace project00.Models
 
             try
             {
-                string connectionstring = "Server = DESKTOP-QB99BRD; Database = sms; Trusted_Connection = True;";
+                string connectionstring = "Server = DESKTOP-IPUP7LB; Database = sms; Trusted_Connection = True;";
                 SqlConnection connection = new SqlConnection(connectionstring);
                 connection.Open();
                 if (connection.State == System.Data.ConnectionState.Open)
