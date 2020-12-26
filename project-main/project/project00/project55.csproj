@@ -60,11 +60,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accommodation Management System.cs">
+    <Compile Include="AccommodationManagementSystem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Accommodation Management System.Designer.cs">
-      <DependentUpon>Accommodation Management System.cs</DependentUpon>
+    <Compile Include="AccommodationManagementSystem.Designer.cs">
+      <DependentUpon>AccommodationManagementSystem.cs</DependentUpon>
     </Compile>
     <Compile Include="accommodation\accommodationForm.cs">
       <SubType>Form</SubType>
@@ -123,8 +123,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Accommodation Management System.resx">
-      <DependentUpon>Accommodation Management System.cs</DependentUpon>
+    <EmbeddedResource Include="AccommodationManagementSystem.resx">
+      <DependentUpon>AccommodationManagementSystem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="accommodation\accommodationForm.resx">
       <DependentUpon>accommodationForm.cs</DependentUpon>
@@ -204,6 +204,48 @@
       <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apartment_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\owner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\individual_server_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floods_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\management_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\management_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google_maps_old_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Messages_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commercial_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compass_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

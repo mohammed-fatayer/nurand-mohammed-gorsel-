@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace project00
 {
-    public partial class Accommodation_Management_System : Form
+    public partial class AccommodationManagementSystem : Form
     {
-        public Accommodation_Management_System()
+        public AccommodationManagementSystem()
         {
             InitializeComponent();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
