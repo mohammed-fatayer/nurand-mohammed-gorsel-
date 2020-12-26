@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accommodation Management System.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accommodation Management System.Designer.cs">
+      <DependentUpon>Accommodation Management System.cs</DependentUpon>
+    </Compile>
     <Compile Include="accommodation\accommodationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Accommodation Management System.resx">
+      <DependentUpon>Accommodation Management System.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="accommodation\accommodationForm.resx">
       <DependentUpon>accommodationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,7 +188,9 @@
   <ItemGroup>
     <Folder Include="databse\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\home_48px.png" />
+  </ItemGroup>
   <ItemGroup Condition="$(VisualStudioVersion) == '16.0'">
     <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>$(SSDTPath)\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
