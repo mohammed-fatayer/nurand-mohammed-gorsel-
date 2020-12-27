@@ -42,4 +42,36 @@ namespace project00.Models
         public int OwnerID { get => ownerID; set => ownerID = value; }
         public int CustomerID { get => customerID; set => customerID = value; }
     }
+    //select* from Accommodation
+    //public DataTable GetCustomerInfo()
+    //{
+    //    try 
+    //    {
+    //        // string connectionString = "Server=YUK-5CD8282ZY6;Database=SMS;Trusted_Connection=True;";
+    //        SqlConnection Connection = new SqlConnection(connectionstring);
+    //        Connection.Open();
+
+    //        if (Connection.State == ConnectionState.Open)
+    //        {
+
+    //            string query = $"select * from customer";
+
+    //            SqlCommand sqlCommand = new SqlCommand(query, Connection);
+
+    //            DataTable dt = new DataTable();
+    //            SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+    //            adapter.Fill(dt);
+
+    //            return dt;
+    //        }
+    //        else
+    //        {
+    //            return null;
+    //        }
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        throw new Exception("Log In Error: " + ex.Message);
+    //    }
+    //}
 }

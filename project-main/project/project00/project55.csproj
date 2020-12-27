@@ -90,7 +90,7 @@
     <Compile Include="location\locationForm.Designer.cs">
       <DependentUpon>locationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\accommodatin.cs" />
+    <Compile Include="model\accommodation.cs" />
     <Compile Include="model\payment.cs" />
     <Compile Include="model\person.cs" />
     <Compile Include="model\customer.cs" />
@@ -123,6 +123,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\backItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\backItems.Designer.cs">
+      <DependentUpon>backItems.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccommodationManagementSystem.resx">
       <DependentUpon>AccommodationManagementSystem.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +163,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\backItems.resx">
+      <DependentUpon>backItems.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -8,15 +8,39 @@ using project00.Models;
 using System.Data;
 namespace project00.Models
 {
-    class Customer:Person
+    public class  Customer : Person
     {
-        int customerID;
+
+        public int customerID { get; set; }
+        public int CustomerID
+        {
+            get { return customerID; }
+            set
+            {
+                if (value == 0)
+                {
+                    throw new Exception("please inter a string");
+                }
+                customerID = value;
+            }
+        }
+
+
         public Customer()
         {
 
         }
-       
-      
+        //public Customer(Person p)
+        //{
+        //    this.customerID = p.;
+        //    this.firstname = p.Firstname;
+        //    this.lastname = p.Lastname;
+        //    this.gender = p.Gender;
+        //    this.email =p.Email;
+        //    this.password = p.Password;
+        //    this.address = p.Address;            
+        //}
+
 
         public Customer(int customerID, string firstname, string lastname, string gender, string email, string password, string address)
         {
@@ -30,12 +54,9 @@ namespace project00.Models
         }
         public override Person Login(string firstname, string password)
         {
-
-
-
             try
             {
-                string connectionstring = "Server = DESKTOP-IPUP7LB; Database = sms; Trusted_Connection = True;";
+                //string connectionstring = "Server = DESKTOP-IPUP7LB; Database = sms; Trusted_Connection = True;";
                 SqlConnection connection = new SqlConnection(connectionstring);
                 connection.Open();
                 if (connection.State == System.Data.ConnectionState.Open)
@@ -74,8 +95,38 @@ namespace project00.Models
                 throw new Exception("error in login.");
             }
         }
-       
-     
+
+        public DataTable GetCustomerInfo(int id)
+        {
+            try
+            {
+               // string connectionString = "Server=YUK-5CD8282ZY6;Database=SMS;Trusted_Connection=True;";
+                SqlConnection Connection = new SqlConnection(connectionstring);
+                Connection.Open();
+
+                if (Connection.State == ConnectionState.Open)
+                {
+
+                    string query = $"select * from customer where customerID = " + id;
+
+                    SqlCommand sqlCommand = new SqlCommand(query, Connection);
+
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+                    adapter.Fill(dt);
+
+                    return dt;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Log In Error: " + ex.Message);
+            }
+        }
 
     }
 }

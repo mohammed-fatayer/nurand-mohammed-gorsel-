@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 namespace project00.Models
 {
-   abstract class Person
+   public abstract class Person
     {
         protected string firstname;
         protected string lastname;
@@ -17,6 +18,13 @@ namespace project00.Models
         protected string password;
         protected string address;
 
+        protected static string connectionstring;
+        
+
+        public Person()
+        {
+            connectionstring = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
+        }
 
         public string  Firstname
 
@@ -37,6 +45,7 @@ namespace project00.Models
         public string Email { get => email; set => email = value; }
         public string Password { get => password; set => password = value; }
         public string Address { get => address; set => address = value; }
+        
 
         public void display()
         {

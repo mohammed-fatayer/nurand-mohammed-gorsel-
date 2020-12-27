@@ -36,8 +36,7 @@ namespace project00
 
                         owner o = new owner();
                        var result = o.Login(firstname, password);
-                        if (result != null) 
-                       
+                        if (result != null)                        
                         {
                             label3.ForeColor = Color.Green;
                             label3.Text = ("you are in");
@@ -56,8 +55,8 @@ namespace project00
                     var result = c.Login(firstname, password);
                     label3.ForeColor = Color.Green;
                     label3.Text = ("you are in");
-                    this.Hide();
-                    customerForm oform = new customerForm();
+                    this.Hide();                   
+                    AccommodationManagementSystem oform = new AccommodationManagementSystem(result);
                     oform.Show();
 
                 }
