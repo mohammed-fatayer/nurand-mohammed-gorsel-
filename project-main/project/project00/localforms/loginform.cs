@@ -41,8 +41,12 @@ namespace project00
                             label3.ForeColor = Color.Green;
                             label3.Text = ("you are in");
                             this.Hide();
-                            ownerform oform = new ownerform();
+                            ownerform oform = new ownerform(result);
                             oform.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("wrong information");
                         }
 
                     }
@@ -53,12 +57,18 @@ namespace project00
                 {
                     Customer c = new Customer();
                     var result = c.Login(firstname, password);
-                    label3.ForeColor = Color.Green;
-                    label3.Text = ("you are in");
-                    this.Hide();                   
-                    AccommodationManagementSystem oform = new AccommodationManagementSystem(result);
-                    oform.Show();
-
+                    if (result != null)
+                    {
+                        label3.ForeColor = Color.Green;
+                        label3.Text = ("you are in");
+                        this.Hide();
+                        AccommodationManagementSystem oform = new AccommodationManagementSystem(result);
+                        oform.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("wrong infromation"); 
+                    }
                 }
 
 
@@ -82,6 +92,18 @@ namespace project00
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             textBox1.PasswordChar = '*';
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+            registrationform rform = new registrationform();
+            rform.Show();
+        }
+
+        private void loginform_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

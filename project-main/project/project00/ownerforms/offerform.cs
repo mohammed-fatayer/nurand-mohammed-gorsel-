@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace project00
 {
-    public partial class oaddform : Form
+    public partial class offerform : Form
     {
-        public oaddform()
+        public offerform()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace project00
 {
-    partial class massageform
+    partial class messageform
     {
         /// <summary>
         /// Required designer variable.
@@ -32,15 +32,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(99, 301);
+            this.button1.Location = new System.Drawing.Point(12, 282);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 30);
+            this.button1.Size = new System.Drawing.Size(121, 43);
             this.button1.TabIndex = 0;
             this.button1.Text = "send";
             this.button1.UseVisualStyleBackColor = false;
@@ -48,18 +47,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 275);
+            this.textBox1.Location = new System.Drawing.Point(46, 256);
             this.textBox1.MaximumSize = new System.Drawing.Size(181, 20);
             this.textBox1.MinimumSize = new System.Drawing.Size(181, 20);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(181, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(209, 301);
+            this.button2.Location = new System.Drawing.Point(139, 282);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 30);
+            this.button2.Size = new System.Drawing.Size(126, 43);
             this.button2.TabIndex = 2;
             this.button2.Text = "clear";
             this.button2.UseVisualStyleBackColor = true;
@@ -68,35 +68,30 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(99, 30);
+            this.textBox2.Location = new System.Drawing.Point(12, 11);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(181, 239);
+            this.textBox2.Size = new System.Drawing.Size(253, 239);
             this.textBox2.TabIndex = 3;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(80, 21);
-            this.comboBox1.TabIndex = 4;
             // 
             // massageform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(292, 343);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(277, 326);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(293, 365);
+            this.MinimumSize = new System.Drawing.Size(293, 365);
             this.Name = "massageform";
-            this.Text = "massageform2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "messages";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,6 +103,5 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

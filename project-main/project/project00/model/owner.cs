@@ -10,6 +10,7 @@ namespace project00.Models
     internal class owner : Person
     {
         int ownerID;
+        public int OwnerID { get; set; }
         public owner()
         {
 
@@ -79,8 +80,38 @@ namespace project00.Models
                 throw new Exception("error in login.");
             }
         }
+        public DataTable GetownerInfo(int id)
+        {
+            try
+            {
+                // string connectionString = "Server=YUK-5CD8282ZY6;Database=SMS;Trusted_Connection=True;";
+                SqlConnection Connection = new SqlConnection(connectionstring);
+                Connection.Open();
 
-       
+                if (Connection.State == ConnectionState.Open)
+                {
+
+                    string query = $"select * from owner where ownerID = " + id;
+
+                    SqlCommand sqlCommand = new SqlCommand(query, Connection);
+
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+                    adapter.Fill(dt);
+
+                    return dt;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Log In Error: " + ex.Message);
+            }
+        }
+
     }
 }
       

@@ -259,7 +259,7 @@
             this.dgvData.Name = "dgvData";
             this.dgvData.Size = new System.Drawing.Size(535, 185);
             this.dgvData.TabIndex = 14;
-            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+           
             // 
             // panel3
             // 

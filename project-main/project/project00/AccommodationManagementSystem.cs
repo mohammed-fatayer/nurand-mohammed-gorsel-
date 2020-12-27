@@ -45,13 +45,10 @@ namespace project00
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+     
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -60,6 +57,7 @@ namespace project00
                 Customer cust = (Customer)person;
                 Customer obj = new Customer();
                 dgvData.DataSource = obj.GetCustomerInfo(cust.CustomerID);
+                
             }
         }
 

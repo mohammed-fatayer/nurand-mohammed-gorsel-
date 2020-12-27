@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace project00
 {
-    public partial class massageform : Form
+    public partial class messageform : Form
     {
         public static string passingtext;
-        public massageform()
+        public messageform()
         {
             InitializeComponent();
             TextBox textBox1 = new TextBox();
@@ -39,6 +39,11 @@ namespace project00
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = null;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
