@@ -31,6 +31,7 @@ namespace project00
         {
             if (person != null)
             {
+                lblTitle.Text = "Customer details";
                 Customer cust = (Customer)person;
                 Customer obj = new Customer();
                 dgvData.DataSource = obj.GetCustomerInfo(cust.CustomerID);
@@ -172,6 +173,44 @@ namespace project00
             {
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UpdateBorder(((Button)sender).Name);
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UpdateBorder(((Button)sender).Name);
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UpdateBorder(((Button)sender).Name);
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

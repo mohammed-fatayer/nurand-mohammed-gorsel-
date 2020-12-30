@@ -279,6 +279,9 @@
   <ItemGroup>
     <None Include="Resources\compass_64px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card_payment_64px1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>

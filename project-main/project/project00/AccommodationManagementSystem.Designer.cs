@@ -30,17 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccommodationManagementSystem));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btmassage = new System.Windows.Forms.Button();
-            this.btadvert = new System.Windows.Forms.Button();
-            this.btdetails = new System.Windows.Forms.Button();
-            this.bthome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -66,6 +60,16 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btdetails = new System.Windows.Forms.Button();
+            this.bthome = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -87,8 +91,12 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.splitContainer1.Panel1.Controls.Add(this.btmassage);
-            this.splitContainer1.Panel1.Controls.Add(this.btadvert);
+            this.splitContainer1.Panel1.Controls.Add(this.button5);
+            this.splitContainer1.Panel1.Controls.Add(this.button7);
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.button3);
+            this.splitContainer1.Panel1.Controls.Add(this.button4);
+            this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.btdetails);
             this.splitContainer1.Panel1.Controls.Add(this.bthome);
             // 
@@ -102,58 +110,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 248;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // btmassage
-            // 
-            this.btmassage.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btmassage.Image = ((System.Drawing.Image)(resources.GetObject("btmassage.Image")));
-            this.btmassage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btmassage.Location = new System.Drawing.Point(11, 151);
-            this.btmassage.Name = "btmassage";
-            this.btmassage.Size = new System.Drawing.Size(223, 50);
-            this.btmassage.TabIndex = 21;
-            this.btmassage.Text = "MASSAGE";
-            this.btmassage.UseVisualStyleBackColor = false;
-            this.btmassage.Click += new System.EventHandler(this.btmassage_Click);
-            // 
-            // btadvert
-            // 
-            this.btadvert.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btadvert.Image = ((System.Drawing.Image)(resources.GetObject("btadvert.Image")));
-            this.btadvert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btadvert.Location = new System.Drawing.Point(11, 207);
-            this.btadvert.Name = "btadvert";
-            this.btadvert.Size = new System.Drawing.Size(223, 50);
-            this.btadvert.TabIndex = 20;
-            this.btadvert.Text = "ADVERTISEMENT";
-            this.btadvert.UseVisualStyleBackColor = false;
-            this.btadvert.Click += new System.EventHandler(this.btadvert_Click);
-            // 
-            // btdetails
-            // 
-            this.btdetails.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btdetails.Image = ((System.Drawing.Image)(resources.GetObject("btdetails.Image")));
-            this.btdetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btdetails.Location = new System.Drawing.Point(11, 95);
-            this.btdetails.Name = "btdetails";
-            this.btdetails.Size = new System.Drawing.Size(223, 50);
-            this.btdetails.TabIndex = 16;
-            this.btdetails.Text = "DETAIS";
-            this.btdetails.UseVisualStyleBackColor = false;
-            this.btdetails.Click += new System.EventHandler(this.btdetails_Click_1);
-            // 
-            // bthome
-            // 
-            this.bthome.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bthome.Image = ((System.Drawing.Image)(resources.GetObject("bthome.Image")));
-            this.bthome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bthome.Location = new System.Drawing.Point(12, 39);
-            this.bthome.Name = "bthome";
-            this.bthome.Size = new System.Drawing.Size(223, 50);
-            this.bthome.TabIndex = 12;
-            this.bthome.Text = "HOME";
-            this.bthome.UseVisualStyleBackColor = false;
-            this.bthome.Click += new System.EventHandler(this.bthome_Click);
             // 
             // panel2
             // 
@@ -215,50 +171,6 @@
             this.flowLayoutPanel1.TabIndex = 10;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button10.FlatAppearance.BorderSize = 2;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.button10.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button10.Location = new System.Drawing.Point(24, 24);
-            this.button10.Margin = new System.Windows.Forms.Padding(24);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(0, 16, 0, 8);
-            this.button10.Size = new System.Drawing.Size(147, 82);
-            this.button10.TabIndex = 3;
-            this.button10.Text = "Customer";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.FlatAppearance.BorderSize = 2;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.button6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button6.Location = new System.Drawing.Point(219, 24);
-            this.button6.Margin = new System.Windows.Forms.Padding(24);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(0, 16, 0, 8);
-            this.button6.Size = new System.Drawing.Size(126, 84);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "         Accomodation";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // dgvData
             // 
             this.dgvData.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
@@ -267,6 +179,7 @@
             this.dgvData.Name = "dgvData";
             this.dgvData.Size = new System.Drawing.Size(535, 185);
             this.dgvData.TabIndex = 14;
+            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
             // panel3
             // 
@@ -452,11 +365,156 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(31, 13);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(35, 13);
+            this.lblTitle.Size = new System.Drawing.Size(0, 24);
             this.lblTitle.TabIndex = 17;
-            this.lblTitle.Text = "label1";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(3, 392);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(246, 59);
+            this.button5.TabIndex = 22;
+            this.button5.Text = "HOME";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(3, 345);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(246, 54);
+            this.button7.TabIndex = 21;
+            this.button7.Text = "DETAIS";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(3, 289);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(246, 59);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "HOME";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button3.Image = global::project00.Properties.Resources.commercial_40px;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(3, 242);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(246, 54);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "ANNOUCEMENT";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button4.Image = global::project00.Properties.Resources.card_payment_64px;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(3, 188);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(246, 59);
+            this.button4.TabIndex = 18;
+            this.button4.Text = "MAKE A PAYMENT";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(3, 133);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(246, 59);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "MESSAGE";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btdetails
+            // 
+            this.btdetails.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btdetails.Image = ((System.Drawing.Image)(resources.GetObject("btdetails.Image")));
+            this.btdetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btdetails.Location = new System.Drawing.Point(3, 86);
+            this.btdetails.Name = "btdetails";
+            this.btdetails.Size = new System.Drawing.Size(246, 54);
+            this.btdetails.TabIndex = 16;
+            this.btdetails.Text = "DETAIS";
+            this.btdetails.UseVisualStyleBackColor = false;
+            this.btdetails.Click += new System.EventHandler(this.btdetails_Click_1);
+            // 
+            // bthome
+            // 
+            this.bthome.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bthome.Image = ((System.Drawing.Image)(resources.GetObject("bthome.Image")));
+            this.bthome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bthome.Location = new System.Drawing.Point(3, 32);
+            this.bthome.Name = "bthome";
+            this.bthome.Size = new System.Drawing.Size(246, 59);
+            this.bthome.TabIndex = 12;
+            this.bthome.Text = "HOME";
+            this.bthome.UseVisualStyleBackColor = false;
+            this.bthome.Click += new System.EventHandler(this.bthome_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button10.FlatAppearance.BorderSize = 2;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.button10.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button10.Location = new System.Drawing.Point(24, 24);
+            this.button10.Margin = new System.Windows.Forms.Padding(24);
+            this.button10.Name = "button10";
+            this.button10.Padding = new System.Windows.Forms.Padding(0, 16, 0, 8);
+            this.button10.Size = new System.Drawing.Size(147, 82);
+            this.button10.TabIndex = 3;
+            this.button10.Text = "Customer";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button6.FlatAppearance.BorderSize = 2;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.button6.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button6.Location = new System.Drawing.Point(219, 24);
+            this.button6.Margin = new System.Windows.Forms.Padding(24);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(0, 16, 0, 8);
+            this.button6.Size = new System.Drawing.Size(126, 84);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "         Accomodation";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // AccommodationManagementSystem
             // 
@@ -495,8 +553,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button bthome;
-        private System.Windows.Forms.Button btmassage;
-        private System.Windows.Forms.Button btadvert;
         private System.Windows.Forms.Button btdetails;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -526,5 +582,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button2;
     }
 }
