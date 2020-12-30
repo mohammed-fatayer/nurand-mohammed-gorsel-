@@ -83,6 +83,16 @@ namespace project00.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap apartment_50px {
+            get {
+                object obj = ResourceManager.GetObject("apartment_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap card_payment_64px {
             get {
                 object obj = ResourceManager.GetObject("card_payment_64px", resourceCulture);
@@ -156,6 +166,16 @@ namespace project00.Properties {
         internal static System.Drawing.Bitmap house_48px {
             get {
                 object obj = ResourceManager.GetObject("house_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap house_48px1 {
+            get {
+                object obj = ResourceManager.GetObject("house_48px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

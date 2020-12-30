@@ -101,7 +101,7 @@ namespace project00.Models
 
                 if (Connection.State == ConnectionState.Open)
                 {
-
+                    //$"select c.CustomerID,c.firstname,c.LastName,c.Gender,c.Email,c.Address from customer c = " + id;
                     string query = $"select * from customer where customerID = " + id;
 
                     SqlCommand sqlCommand = new SqlCommand(query, Connection);

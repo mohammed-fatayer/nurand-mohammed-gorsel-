@@ -154,6 +154,9 @@
   <data name="management_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\management_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="card_payment_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\card_payment_64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-clear-formatting-40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-clear-formatting-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,6 +165,9 @@
   </data>
   <data name="icons8-login-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-login-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="apartment_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apartment_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="floods_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\floods_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,7 +184,7 @@
   <data name="Messages_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Messages_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="card_payment_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\card_payment_64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="house_48px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\house_48px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

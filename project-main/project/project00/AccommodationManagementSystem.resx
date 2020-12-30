@@ -371,16 +371,7 @@
         zjDxAeUAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAWNJREFUWEft
-        k79Lw0AYhu8vFATrYkDopKC7VApGUAstOLgouKoILg5SpFXwJ7iJwb1mrIPiKvLZ9/yEGI4S8t2FJt7B
-        A0feJO/DcZ+q3Fpp75ME/o27hZKX149c/C9B/KxIuDb7wkemU3CBF5QiFpxqnBmxlVsRbHff/5AskObV
-        P0HXeEEpYkHT/QG2ciuC46ZQmlf/BF3jBaWIBU33B9jKrQiOm0JpXv0TdE35BRd3Hhfq2w8XQetqWAv7
-        nzNr519FC6IT3XCAC5xYT6mgdUNLuxGtHg1o43SoSQqa7g+wlaPrt7dxONAucGI9pdITBtKC6TxZIM3R
-        lc4B62UTNGErFwu6pvyCzeOYlvcimu/c02zYH01Uj4LNS1o/iOjkLqbn+E2DPZ7VO7dUC3sa7KXvoQud
-        6IYDXODEeuYp/pmmJ5rbuqbpZlcTjPbFvJdhiicB1vOCuWE9L5gb1iuB4OQupb4BKiLL4xAiEZoAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
 </root>

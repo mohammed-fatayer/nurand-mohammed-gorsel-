@@ -9,7 +9,7 @@ namespace project00
     public partial class AccommodationManagementSystem : Form
     {
         Person person = null;
-
+      
         public AccommodationManagementSystem(Person p)
         {
             InitializeComponent();
@@ -102,7 +102,7 @@ namespace project00
                         if (btn.Name == name) //x1        
                         {
                             //btn.FlatAppearance.BorderColor = Color.Red;
-                            btn.BackColor = Color.DarkViolet;
+                            btn.BackColor = Color.SkyBlue;
                         }
                         else
                         {
@@ -165,6 +165,9 @@ namespace project00
 
         private void btdetails_Click_1(object sender, EventArgs e)
         {
+            lblTitle.Text = "Payment Details";
+            Payment obj = new Payment();
+            dgvData.DataSource = obj.GetPaymentInfo();
             try
             {
                 UpdateBorder(((Button)sender).Name);
@@ -188,6 +191,8 @@ namespace project00
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
+            
             try
             {
                 UpdateBorder(((Button)sender).Name);
@@ -211,6 +216,36 @@ namespace project00
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        // object sender : gridview
+        private void dgvData_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex!=-1 && e.ColumnIndex!=-1)
+                {
+                    if (e.Button==MouseButtons.Right)//clk right,show sth
+                    {
+                        //b2 
+                        //var accommodationID = int.Parse(dgvData.Rows[e.RowIndex].Cells["AccomodationID"].Value.ToString());
+                        //MessageBox.Show(accommodationID.ToString());
+                         //ID  = int.Parse(dgvData.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        //b1 click following to screen 
+                        var relativePosition = dgvData.PointToClient(Cursor.Position);
+                        contextMenuStrip1.Show(dgvData, relativePosition);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {   //b2
+            MessageBox.Show("Your click edit");
         }
     }
 }

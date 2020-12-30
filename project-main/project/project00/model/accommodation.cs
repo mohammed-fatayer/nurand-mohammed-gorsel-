@@ -53,7 +53,7 @@ namespace project00.Models
         {
             try
             {
-                string query = $"select *from Accommodation";
+                string query = $"select a.AccommodationID,a.OwnerID,a.[Accommodation Selection],a.Details,a.Operation,a.Price,a.Period from Accommodation a";
                 return dbHelper.ExecuteQuery(query);  //its static, can call method direcly
             }
             catch (Exception ex)
