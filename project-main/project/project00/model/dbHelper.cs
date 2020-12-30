@@ -1,33 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace project00.model
-{
+{//d1 static method : using dbhelper mt without creating obj
+ // with no static=> dbhelper new..... then can use its method  
     public static class dbHelper
-    {
-        // select
-        public static DataTable ExecuteQuery(string query, SqlParameter[] parameters = null)
+    {   //d2 add static as well, str qurey vececez, give qurey as a parameter i
+        // if other obj have qurey so its connect here and no need to update       
+        public static DataTable ExecuteQuery(string query)
         {
             try
             {
-                //string connectionString = "Server=YUK-5CD8282ZY6;Database=SMS;Trusted_Connection=True;";
-                string connectionString = ConfigurationManager.AppSettings["ConString"];
-                SqlConnection sqlConnection = new SqlConnection(connectionString);
-                sqlConnection.Open();
+                //d3 cnt to DB
+                string connectionString = "Server = DESKTOP-IPUP7LB; Database = sms; Trusted_Connection = True";
+                SqlConnection Connection = new SqlConnection(connectionString);
+                Connection.Open();
 
-                if (sqlConnection.State == ConnectionState.Open)
+                if (Connection.State == ConnectionState.Open)
                 {
-                    SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-                    if (parameters != null)
-                    {
-                        sqlCommand.Parameters.AddRange(parameters);
-                    }
+                    SqlCommand sqlCommand = new SqlCommand(query, Connection);
 
                     DataTable dt = new DataTable();
                     SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
@@ -42,7 +34,7 @@ namespace project00.model
             }
             catch (Exception ex)
             {
-                throw new Exception("GetAllDeparments Error: " + ex.Message);
+                throw new Exception("Log In Error: " + ex.Message);
             }
         }
     }

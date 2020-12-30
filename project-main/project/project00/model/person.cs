@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data;
 using System.Configuration;
 
 namespace project00.Models
 {
-   public abstract class Person
+    public abstract class Person
     {
         protected string firstname;
         protected string lastname;
@@ -18,15 +12,15 @@ namespace project00.Models
         protected string password;
         protected string address;
 
-        protected static string connectionstring;
-        
+        protected static string connectionString;
+
 
         public Person()
         {
-            connectionstring = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString;
         }
 
-        public string  Firstname
+        public string Firstname
 
         {
             get { return firstname; }
@@ -35,8 +29,8 @@ namespace project00.Models
                 if (value == " ")
                 {
                     throw new Exception("please inter a string");
-                } 
-                firstname = value; 
+                }
+                firstname = value;
             }
         }
 
@@ -45,14 +39,14 @@ namespace project00.Models
         public string Email { get => email; set => email = value; }
         public string Password { get => password; set => password = value; }
         public string Address { get => address; set => address = value; }
-        
+
 
         public void display()
         {
             Console.WriteLine($"name{firstname},lastname{lastname}");
         }
         public abstract Person Login(string firstname, string password);
-        
+
         public void logout(Person p)
         {
             try
@@ -62,11 +56,16 @@ namespace project00.Models
                     Console.WriteLine($"come back soon owner {p.firstname}");
                 }
                 if (p is Customer)
-               
+
                 {
                     Console.WriteLine($"come back soon student{p.firstname}");
                 }
-                
+                if (p is accommodation)
+
+                {
+                    Console.WriteLine($"come back soon student{p.firstname}");
+                }
+
             }
             catch (Exception ex)
             {
@@ -76,6 +75,6 @@ namespace project00.Models
         }
     }
 
- 
+
 
 }

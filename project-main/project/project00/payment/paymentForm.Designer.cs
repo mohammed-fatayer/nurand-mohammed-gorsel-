@@ -1,6 +1,6 @@
 ﻿namespace project00
 {
-    partial class paymentForm
+    partial class PaymentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -336,14 +336,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = " Payment ID :";
             // 
-            // paymentForm
+            // PaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
-            this.Name = "paymentForm";
-            this.Text = "paymentForm";
+            this.Name = "PaymentForm";
+            this.Text = "PaymentForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

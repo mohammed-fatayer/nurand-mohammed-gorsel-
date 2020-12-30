@@ -42,6 +42,7 @@
             this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "accept policy";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // button2
             // 

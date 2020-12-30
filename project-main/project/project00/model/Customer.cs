@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using project00.Models;
 using System.Data;
+using System.Data.SqlClient;
 namespace project00.Models
 {
-    public class  Customer : Person
+    public class Customer : Person
     {
 
         public int customerID { get; set; }
@@ -56,8 +51,8 @@ namespace project00.Models
         {
             try
             {
-                //string connectionstring = "Server = DESKTOP-IPUP7LB; Database = sms; Trusted_Connection = True;";
-                SqlConnection connection = new SqlConnection(connectionstring);
+                //string connectionString = "Server = DESKTOP-IPUP7LB; Database = sms; Trusted_Connection = True;";
+                SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
                 if (connection.State == System.Data.ConnectionState.Open)
                 {
@@ -89,7 +84,7 @@ namespace project00.Models
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw new Exception("error in login.");
@@ -100,8 +95,8 @@ namespace project00.Models
         {
             try
             {
-               // string connectionString = "Server=YUK-5CD8282ZY6;Database=SMS;Trusted_Connection=True;";
-                SqlConnection Connection = new SqlConnection(connectionstring);
+                // string connectionString = "Server=YUK-5CD8282ZY6;Database=SMS;Trusted_Connection=True;";
+                SqlConnection Connection = new SqlConnection(connectionString);
                 Connection.Open();
 
                 if (Connection.State == ConnectionState.Open)

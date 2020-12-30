@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 namespace project00.Models
 {
     internal class owner : Person
@@ -30,7 +26,7 @@ namespace project00.Models
 
         public int Name { get; private set; }
 
-        public void display()
+        public void Display()
         {
             Console.WriteLine($"ID{ownerID},name{firstname}");
         }
@@ -41,8 +37,8 @@ namespace project00.Models
 
             try
             {
-                //connectionstring = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
-                SqlConnection connection = new SqlConnection(connectionstring);
+                //connectionString = ConfigurationManager.connectionStrings["DBconnectionString"].connectionString;
+                SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
                 if (connection.State == System.Data.ConnectionState.Open)
                 {
@@ -55,7 +51,7 @@ namespace project00.Models
                     if (dt.Rows.Count > 0)
                     {
                         owner o = new owner();
-                        o.ownerID = int.Parse( dt.Rows[0][ownerID].ToString());
+                        o.ownerID = int.Parse(dt.Rows[0][ownerID].ToString());
                         o.firstname = dt.Rows[0]["name"].ToString();
                         o.Email = dt.Rows[0]["Email"].ToString();
                         o.gender = dt.Rows[0]["Gender"].ToString();
@@ -74,9 +70,9 @@ namespace project00.Models
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                
+
                 throw new Exception("error in login.");
             }
         }
@@ -85,7 +81,7 @@ namespace project00.Models
             try
             {
                 // string connectionString = "Server=YUK-5CD8282ZY6;Database=SMS;Trusted_Connection=True;";
-                SqlConnection Connection = new SqlConnection(connectionstring);
+                SqlConnection Connection = new SqlConnection(connectionString);
                 Connection.Open();
 
                 if (Connection.State == ConnectionState.Open)
@@ -114,5 +110,4 @@ namespace project00.Models
 
     }
 }
-      
-    
+

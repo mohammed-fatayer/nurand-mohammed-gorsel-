@@ -91,6 +91,7 @@
       <DependentUpon>locationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="model\accommodation.cs" />
+    <Compile Include="model\dbHelper.cs" />
     <Compile Include="model\payment.cs" />
     <Compile Include="model\person.cs" />
     <Compile Include="model\customer.cs" />

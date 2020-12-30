@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccommodationManagementSystem));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btmassage = new System.Windows.Forms.Button();
+            this.btadvert = new System.Windows.Forms.Button();
+            this.btdetails = new System.Windows.Forms.Button();
+            this.bthome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,11 +65,13 @@
             this.manageToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.panel3.SuspendLayout();
@@ -84,10 +87,10 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.splitContainer1.Panel1.Controls.Add(this.button12);
-            this.splitContainer1.Panel1.Controls.Add(this.button13);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Controls.Add(this.button5);
+            this.splitContainer1.Panel1.Controls.Add(this.btmassage);
+            this.splitContainer1.Panel1.Controls.Add(this.btadvert);
+            this.splitContainer1.Panel1.Controls.Add(this.btdetails);
+            this.splitContainer1.Panel1.Controls.Add(this.bthome);
             // 
             // splitContainer1.Panel2
             // 
@@ -100,53 +103,57 @@
             this.splitContainer1.SplitterDistance = 248;
             this.splitContainer1.TabIndex = 0;
             // 
-            // button12
+            // btmassage
             // 
-            this.button12.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button12.Image = global::project00.Properties.Resources.Messages_48px;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(11, 151);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(223, 50);
-            this.button12.TabIndex = 21;
-            this.button12.Text = "MASSAGE";
-            this.button12.UseVisualStyleBackColor = false;
+            this.btmassage.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btmassage.Image = ((System.Drawing.Image)(resources.GetObject("btmassage.Image")));
+            this.btmassage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btmassage.Location = new System.Drawing.Point(11, 151);
+            this.btmassage.Name = "btmassage";
+            this.btmassage.Size = new System.Drawing.Size(223, 50);
+            this.btmassage.TabIndex = 21;
+            this.btmassage.Text = "MASSAGE";
+            this.btmassage.UseVisualStyleBackColor = false;
+            this.btmassage.Click += new System.EventHandler(this.btmassage_Click);
             // 
-            // button13
+            // btadvert
             // 
-            this.button13.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button13.Image = global::project00.Properties.Resources.commercial_40px;
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(11, 207);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(223, 50);
-            this.button13.TabIndex = 20;
-            this.button13.Text = "ADVERTISEMENT";
-            this.button13.UseVisualStyleBackColor = false;
+            this.btadvert.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btadvert.Image = ((System.Drawing.Image)(resources.GetObject("btadvert.Image")));
+            this.btadvert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btadvert.Location = new System.Drawing.Point(11, 207);
+            this.btadvert.Name = "btadvert";
+            this.btadvert.Size = new System.Drawing.Size(223, 50);
+            this.btadvert.TabIndex = 20;
+            this.btadvert.Text = "ADVERTISEMENT";
+            this.btadvert.UseVisualStyleBackColor = false;
+            this.btadvert.Click += new System.EventHandler(this.btadvert_Click);
             // 
-            // button1
+            // btdetails
             // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Image = global::project00.Properties.Resources.individual_server_40px;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(11, 95);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(223, 50);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "DETAIS";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btdetails.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btdetails.Image = ((System.Drawing.Image)(resources.GetObject("btdetails.Image")));
+            this.btdetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btdetails.Location = new System.Drawing.Point(11, 95);
+            this.btdetails.Name = "btdetails";
+            this.btdetails.Size = new System.Drawing.Size(223, 50);
+            this.btdetails.TabIndex = 16;
+            this.btdetails.Text = "DETAIS";
+            this.btdetails.UseVisualStyleBackColor = false;
+            this.btdetails.Click += new System.EventHandler(this.btdetails_Click_1);
             // 
-            // button5
+            // bthome
             // 
-            this.button5.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button5.Image = global::project00.Properties.Resources.home_48px;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(12, 39);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(223, 50);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "HOME";
-            this.button5.UseVisualStyleBackColor = false;
+            this.bthome.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bthome.Image = ((System.Drawing.Image)(resources.GetObject("bthome.Image")));
+            this.bthome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bthome.Location = new System.Drawing.Point(12, 39);
+            this.bthome.Name = "bthome";
+            this.bthome.Size = new System.Drawing.Size(223, 50);
+            this.bthome.TabIndex = 12;
+            this.bthome.Text = "HOME";
+            this.bthome.UseVisualStyleBackColor = false;
+            this.bthome.Click += new System.EventHandler(this.bthome_Click);
             // 
             // panel2
             // 
@@ -190,6 +197,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Location = new System.Drawing.Point(1, 149);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(535, 43);
@@ -203,7 +211,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 32);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(1);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(546, 113);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(534, 123);
             this.flowLayoutPanel1.TabIndex = 10;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -215,7 +223,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.button10.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button10.Image = global::project00.Properties.Resources.user_50px;
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
             this.button10.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.button10.Location = new System.Drawing.Point(24, 24);
@@ -237,7 +245,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.button6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button6.Image = global::project00.Properties.Resources.floods_40px;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.button6.Location = new System.Drawing.Point(219, 24);
@@ -259,7 +267,6 @@
             this.dgvData.Name = "dgvData";
             this.dgvData.Size = new System.Drawing.Size(535, 185);
             this.dgvData.TabIndex = 14;
-           
             // 
             // panel3
             // 
@@ -442,6 +449,15 @@
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Welcome Home";
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Location = new System.Drawing.Point(31, 13);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(35, 13);
+            this.lblTitle.TabIndex = 17;
+            this.lblTitle.Text = "label1";
+            // 
             // AccommodationManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,6 +475,8 @@
             this.splitContainer1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -476,10 +494,10 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bthome;
+        private System.Windows.Forms.Button btmassage;
+        private System.Windows.Forms.Button btadvert;
+        private System.Windows.Forms.Button btdetails;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -507,5 +525,6 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

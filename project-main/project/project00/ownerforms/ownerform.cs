@@ -1,12 +1,5 @@
 ﻿using project00.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -19,10 +12,10 @@ namespace project00
         {
             InitializeComponent();
             person = p;
-          
+
         }
 
-      
+
 
         private void ownerform_Load(object sender, EventArgs e)
         {
@@ -37,10 +30,10 @@ namespace project00
             loginform lnform = new loginform();
             lnform.Show();
             this.Hide();
-          
+
         }
 
-     
+
 
         private void listView2_load(object sender, EventArgs e)
         {
@@ -63,7 +56,7 @@ namespace project00
 
         private void button9_Click(object sender, EventArgs e)
         {
-            offerform of  = new offerform();
+            offerform of = new offerform();
             of.Show();
         }
 
@@ -73,6 +66,6 @@ namespace project00
             mform.Show();
         }
     }
-    
-   
+
+
 }
