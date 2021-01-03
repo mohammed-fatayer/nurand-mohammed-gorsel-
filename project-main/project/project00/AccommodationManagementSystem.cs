@@ -9,6 +9,7 @@ namespace project00
     public partial class AccommodationManagementSystem : Form
     {
         Person person = null;
+        int ID = -1;//b1 -1:choose nothing
       
         public AccommodationManagementSystem(Person p)
         {
@@ -222,14 +223,18 @@ namespace project00
         {
             try
             {
+                // c1
+                dgvData.ClearSelection();
                 if (e.RowIndex!=-1 && e.ColumnIndex!=-1)
                 {
                     if (e.Button==MouseButtons.Right)//clk right,show sth
                     {
+                        //c2
+                        dgvData.Rows[e.RowIndex].Selected = true;
                         //b2 
                         //var accommodationID = int.Parse(dgvData.Rows[e.RowIndex].Cells["AccomodationID"].Value.ToString());
                         //MessageBox.Show(accommodationID.ToString());
-                         //ID  = int.Parse(dgvData.Rows[e.RowIndex].Cells[0].Value.ToString());
+                         ID  = int.Parse(dgvData.Rows[e.RowIndex].Cells[0].Value.ToString());
                         //b1 click following to screen 
                         var relativePosition = dgvData.PointToClient(Cursor.Position);
                         contextMenuStrip1.Show(dgvData, relativePosition);
@@ -244,8 +249,29 @@ namespace project00
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
-        {   //b2
-            MessageBox.Show("Your click edit");
+        {   
+            try
+            {
+                if (ID==-1)//b2 id=-1 : do nothig => ret eger varsa...
+                {
+                    return;
+                }
+                if (lblTitle.Text.ToLower().Contains("customer"))
+                {
+                    //accommodation.obj.
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+          
+  MessageBox.Show("Your click edit");
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

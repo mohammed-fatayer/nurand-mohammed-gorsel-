@@ -1,10 +1,13 @@
-﻿using System;
+﻿using project00.model;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 namespace project00.Models
 {
     public class Customer : Person
     {
+        internal object operation;
+        internal object price;
 
         public int customerID { get; set; }
         public int CustomerID
@@ -19,7 +22,6 @@ namespace project00.Models
                 customerID = value;
             }
         }
-
 
         public Customer()
         {
@@ -90,6 +92,48 @@ namespace project00.Models
                 throw new Exception("error in login.");
             }
         }
+        public int CustomerAdd(Customer obj)
+        {
+            try
+            {
+
+                string query = $"select *from Customer";
+                return dbHelper.ExecuteNonQuery(query);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
+        public int CustomerDelete(Customer obj)
+        {
+            try
+            {
+
+                string query = $"select *from Customer";
+                return dbHelper.ExecuteNonQuery(query);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
+        public int CustomerUpdate(Customer obj)
+        {
+            try
+            {
+
+                string query = $"select *from Customer";
+                return dbHelper.ExecuteNonQuery(query);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
 
         public DataTable GetCustomerInfo(int id)
         {
@@ -107,7 +151,7 @@ namespace project00.Models
                     SqlCommand sqlCommand = new SqlCommand(query, Connection);
 
                     DataTable dt = new DataTable();
-                    SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+                    SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);    
                     adapter.Fill(dt);
 
                     return dt;
@@ -121,7 +165,7 @@ namespace project00.Models
             {
                 throw new Exception("Log In Error: " + ex.Message);
             }
-        }
+        }   
 
     }
 }
