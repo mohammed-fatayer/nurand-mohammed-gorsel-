@@ -3,10 +3,23 @@ using System.Data;
 using System.Data.SqlClient;
 namespace project00.Models
 {
-    internal class owner : Person
+    public class owner : Person
     {
         int ownerID;
-        public int OwnerID { get; set; }
+        public int OwnerID
+
+        {
+            get { return ownerID; }
+            set
+            {
+                if (value == 0)
+                {
+                    throw new Exception("please inter a string");
+                }
+                ownerID = value;
+            }
+        }
+
         public owner()
         {
 

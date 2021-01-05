@@ -51,7 +51,7 @@ namespace project00
         {
             lblTitle.Text = "Accommodation Details";
             accommodation obj = new accommodation();
-            dgvData.DataSource = obj.GetAccInfo();
+            dgvData.DataSource = obj.GetAccInfo(0);
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -270,6 +270,32 @@ namespace project00
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var acc = new accommodation();
+            acc.Accommodation_selection = "Test";
+            acc.Details_accommodation = "Test Detail";
+            acc.Operation="Test Operation";
+            acc.Price = 100;
+            acc.Period = 1;
+            acc.OwnerID = 4;
+            acc.CustomerID = 1;
+
+            acc.AccommodationAdd(acc);
+            dgvData.DataSource = acc.GetAccInfo(0);
+        }
+
+        private void BtnAddAcc_Click(object sender, EventArgs e)
+        {
+            //person owner = new person();
+            //owner
+        }
+
+        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
         }

@@ -12,8 +12,8 @@ namespace project00.Models
         private string accommodation_selection;
         private string operation;
         private string details_accommodation;
-        private string price;
-        private string period;
+        private int price;
+        private int period;
         private int locationID;
         private int ownerID;
         private int customerID;
@@ -28,7 +28,7 @@ namespace project00.Models
             string accommodation_selection,
             string operation,
             string details_accommodation,
-            string price, string period,
+            int price, int period,
             int locationID, int ownerID, int customerID)
         {
             this.AccommodationID = accommodationID;
@@ -42,32 +42,31 @@ namespace project00.Models
             this.CustomerID = customerID;
         }
 
-        public int AccommodationID { get; }
-        public string Accommodation_selection { get; }
-        public string Operation { get; }
-        public string Details_accommodation { get; }
-        public string Price { get; }
-        public string Period { get; }
-        public int LocationID { get; }
-        public int OwnerID { get; }
-        public int CustomerID { get; }
+        public int AccommodationID { get; set; }
+        public string Accommodation_selection { get; set; }
+        public string Operation { get; set; }
+        public string Details_accommodation { get; set; }
+        public int Price { get; set; }
+        public int Period { get; set; }
+        public int LocationID { get; set; }
+        public int OwnerID { get; set; }
+        public int CustomerID { get; set; }
 
-        //public int AccommodationAdd(Customer obj)
-        //{
-        //    try
-        //    {
+        public int AccommodationAdd(accommodation obj)
+        {
+            try
+            {
+                string query = $"INSERT INTO Accommodation([Accommodation Selection]" +
+                    $",Operation,Details,Price,Period,OwnerID,CustomerID)VALUES" +
+                    $"('{obj.Accommodation_selection}','{obj.Operation}','{obj.Details_accommodation}',{obj.Price},{obj.Period},{obj.OwnerID},{obj.CustomerID});";
+                return dbHelper.ExecuteNonQuery(query);
+            }
+            catch (Exception ex)
+            {
 
-        //        //string query = $"INSERT INTO Accommodation([Accommodation Selection]" +
-        //        //    $",Operation,Details,Price,Period,OwnerID,CustomerID)VALUES" +
-        //        //    $"('{obj.}',{obj.operation}','{obj.}',{obj.price}12,1,21);";
-        //        //return dbHelper.ExecuteNonQuery(query);
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        throw new Exception(ex.Message);
-        //    }
-        //}
+                throw new Exception(ex.Message);
+            }
+        }
         public int AccommodationDelete(Customer obj)
         {
             try
@@ -97,16 +96,32 @@ namespace project00.Models
             }
         }
         //a1
-        public DataTable GetAccInfo()
+        public DataTable GetAccInfo(int ownerID)
         {
             try
             {
                 string query = $"select a.AccommodationID,a.OwnerID,a.[Accommodation Selection],a.Details,a.Operation,a.Price,a.Period from Accommodation a";
+                if (ownerID > 0)
+                {
+                    query += " where a.ownerid = " + ownerID;
+                }
                 return dbHelper.ExecuteQuery(query);  //its static, can call method direcly
             }
             catch (Exception ex)
             {
                 throw new Exception("GetPaymentInfo Error: " + ex.Message);
+            }
+        }
+        public DataTable GetAccByID(int ID)
+        {
+            try
+            {
+                string query = $"select * from Accommodation a where a.AccommodationID="+ID;                
+                return dbHelper.ExecuteQuery(query);  //its static, can call method direcly
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("GetAccommodationInfo Error: " + ex.Message);
             }
         }
 
