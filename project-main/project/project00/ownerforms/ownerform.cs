@@ -75,7 +75,7 @@ namespace project00
         {
             owner o = (owner)person;
             owner obj = new owner();
-            AddAccForm aForm = new AddAccForm(o,null,"add");
+            AddAccForm aForm = new AddAccForm(o,null,"add"); //e5
             aForm.Show();
 
         }
@@ -135,6 +135,21 @@ namespace project00
                 AddAccForm accForm = new AddAccForm((owner)person,acc,"edit");
                 accForm.Show();
             }
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var acc = new accommodation();
+            acc.Accommodation_selection = "Test";
+            acc.Details_accommodation = "Test Detail";
+            acc.Operation = "Test Operation";
+            acc.Price = 100;
+            acc.Period = 1;
+            acc.OwnerID = 4;
+            acc.CustomerID = 1;
+
+            acc.AccommodationAdd(acc);
+            dataGridView1.DataSource = acc.GetAccInfo(0);
         }
     }
 

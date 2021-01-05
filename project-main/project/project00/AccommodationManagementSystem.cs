@@ -249,7 +249,26 @@ namespace project00
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
-        {   
+        {
+
+            if (ID != -1)
+            {
+                Customer cust = new Customer();
+                var dt = cust.GetCustomerInfo(ID);
+                if (dt.Rows.Count > 0)
+                {
+                    cust.customerID = ID;
+                    cust.Firstname = dt.Rows[0]["Firstname"].ToString();
+                    cust.Lastname = dt.Rows[0]["LastName"].ToString();
+                    cust.Gender = dt.Rows[0]["Gender"].ToString();
+                    cust.Email = dt.Rows[0]["Email"].ToString();
+                    cust.Password = dt.Rows[0]["Password"].ToString();
+                    cust.Address = dt.Rows[0]["Address"].ToString();
+             }
+
+                EditCustForm Form = new EditCustForm((Customer)person, cust, "edit");
+                Form.Show();
+            }
             try
             {
                 if (ID==-1)//b2 id=-1 : do nothig => ret eger varsa...
@@ -299,5 +318,32 @@ namespace project00
         {
 
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            Customer o = (Customer)person;
+            BindAccData(o);
+        }
+        private void listView2_load(object sender, EventArgs e)
+        {
+            Customer o = (Customer)person;
+            BindAccData(o);
+        }
+        private void BindAccData(Customer o)
+        {
+            dgvData.DataSource = new Customer().GetCustomerInfo(o.CustomerID);
+        }
+
+        private void updateToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+    
     }
+
 }

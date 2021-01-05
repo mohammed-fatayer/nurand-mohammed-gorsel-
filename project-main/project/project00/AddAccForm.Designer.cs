@@ -42,11 +42,13 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtDetail = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.cbLocation);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
@@ -76,9 +78,9 @@
             "TR",
             "TH",
             "URO"});
-            this.cbLocation.Location = new System.Drawing.Point(169, 260);
+            this.cbLocation.Location = new System.Drawing.Point(275, 192);
             this.cbLocation.Name = "cbLocation";
-            this.cbLocation.Size = new System.Drawing.Size(100, 32);
+            this.cbLocation.Size = new System.Drawing.Size(54, 32);
             this.cbLocation.TabIndex = 21;
             // 
             // label5
@@ -187,6 +189,24 @@
             this.txtDetail.Size = new System.Drawing.Size(299, 76);
             this.txtDetail.TabIndex = 2;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox1.Location = new System.Drawing.Point(169, 264);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 32);
+            this.comboBox1.TabIndex = 22;
+            // 
             // AddAccForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,5 +237,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbLocation;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

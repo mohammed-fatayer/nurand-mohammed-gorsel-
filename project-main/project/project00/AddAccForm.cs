@@ -13,23 +13,25 @@ namespace project00
 {
     public partial class AddAccForm : Form
     {
-        private owner ownerInfo;
+        private owner ownerInfo; //e1   
         private string actionForm = "";
         public AddAccForm()
         {
         }
 
-        public AddAccForm(owner obj,accommodation acc,string action)
+        public AddAccForm(owner obj, accommodation acc,string action) //e2
         {
             InitializeComponent();
-            this.ownerInfo = obj;
+            this.ownerInfo = obj; //e3
             if (action == "edit")
             {
                 if(acc != null)
                 {
+                    cbOperation.SelectedValue = acc.Operation;
                     txtDetail.Text = acc.Details_accommodation;
                     txtPrice.Text = acc.Price.ToString();
-                    cbOperation.SelectedValue = acc.Operation;
+                    txtPrice.Text = acc.Period.ToString();
+                    
                     actionForm = action;
                 }
             }
@@ -38,7 +40,7 @@ namespace project00
                 actionForm = action;
             }
         }
-
+        //e4
         private void btnSave_Click(object sender, EventArgs e)
         {
             if(ownerInfo.OwnerID > 0)
@@ -46,7 +48,7 @@ namespace project00
                 accommodation acc = new accommodation();
                 acc.Operation = cbOperation.Text;
                 acc.Details_accommodation = txtDetail.Text;
-                acc.LocationID = cbLocation.SelectedIndex;
+                //acc.LocationID = cbLocation.SelectedIndex;
                 acc.Price = Convert.ToInt32(txtPrice.Text);
                 acc.Period = Convert.ToInt32(txtPeriod.Text);
                 acc.OwnerID = ownerInfo.OwnerID;

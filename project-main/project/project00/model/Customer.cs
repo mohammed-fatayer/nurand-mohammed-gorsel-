@@ -6,8 +6,7 @@ namespace project00.Models
 {
     public class Customer : Person
     {
-        internal object operation;
-        internal object price;
+    
 
         public int customerID { get; set; }
         public int CustomerID
@@ -39,7 +38,8 @@ namespace project00.Models
         //}
 
 
-        public Customer(int customerID, string firstname, string lastname, string gender, string email, string password, string address)
+        public Customer(int customerID, string firstname, string lastname, string gender,
+            string email, string password, string address, int phoneNumber)
         {
             this.customerID = customerID;
             this.firstname = firstname;
@@ -48,6 +48,7 @@ namespace project00.Models
             this.email = email;
             this.password = password;
             this.address = address;
+            this.phoneNumber = phoneNumber;
         }
         public override Person Login(string firstname, string password)
         {
@@ -97,7 +98,10 @@ namespace project00.Models
             try
             {
 
-                string query = $"select *from Customer";
+                string query = $"INSERT INTO Customer([Gender]" +
+                    $",FirstName,LastName,Email,Password,CustomerID)VALUES" +
+                    $"('{obj.gender}','{obj.firstname}'," +
+                    $"'{obj.lastname}',{obj.email},{obj.password},{obj.CustomerID});";
                 return dbHelper.ExecuteNonQuery(query);
             }
             catch (Exception ex)

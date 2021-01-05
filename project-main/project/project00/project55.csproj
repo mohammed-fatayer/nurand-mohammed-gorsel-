@@ -72,6 +72,7 @@
     <Compile Include="accommodation\accommodationForm.Designer.cs">
       <DependentUpon>accommodationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="action.cs" />
     <Compile Include="AddAccForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +84,12 @@
     </Compile>
     <Compile Include="customer1\customerForm.Designer.cs">
       <DependentUpon>customerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCustForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCustForm.Designer.cs">
+      <DependentUpon>EditCustForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditCustomer.cs">
       <SubType>Form</SubType>
@@ -166,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="customer1\customerForm.resx">
       <DependentUpon>customerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCustForm.resx">
+      <DependentUpon>EditCustForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditCustomer.resx">
       <DependentUpon>FormEditCustomer.cs</DependentUpon>
