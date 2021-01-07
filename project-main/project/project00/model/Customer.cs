@@ -6,8 +6,6 @@ namespace project00.Models
 {
     public class Customer : Person
     {
-
-
         public int customerID { get; set; }
         public int CustomerID
         {

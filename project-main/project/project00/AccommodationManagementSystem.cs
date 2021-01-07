@@ -17,6 +17,7 @@ namespace project00
             person = p;
         }
 
+
         private void AccommodationManagementSystem_Load(object sender, EventArgs e)
         {
             if (person != null)
@@ -181,6 +182,10 @@ namespace project00
 
         private void button2_Click(object sender, EventArgs e)
         {
+            lblTitle.Text = "Message";
+            massages obj = new massages();
+            dgvData.DataSource = obj.GetMesInfo(0);
+
             try
             {
                 UpdateBorder(((Button)sender).Name);
@@ -264,7 +269,7 @@ namespace project00
                     cust.Email = dt.Rows[0]["Email"].ToString();
                     cust.Password = dt.Rows[0]["Password"].ToString();
                     cust.Address = dt.Rows[0]["Address"].ToString();
-             }
+                }
 
                 EditCustForm Form = new EditCustForm((Customer)person, cust, "edit");
                 Form.Show();

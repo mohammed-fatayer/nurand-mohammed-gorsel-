@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccommodationManagementSystem));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -100,9 +97,6 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.splitContainer1.Panel1.Controls.Add(this.button5);
-            this.splitContainer1.Panel1.Controls.Add(this.button7);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.button4);
             this.splitContainer1.Panel1.Controls.Add(this.button2);
@@ -120,49 +114,12 @@
             this.splitContainer1.SplitterDistance = 248;
             this.splitContainer1.TabIndex = 0;
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 392);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(246, 59);
-            this.button5.TabIndex = 22;
-            this.button5.Text = "HOME";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(3, 345);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(246, 54);
-            this.button7.TabIndex = 21;
-            this.button7.Text = "DETAIS";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 289);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(246, 59);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "HOME";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.DodgerBlue;
             this.button3.Image = global::project00.Properties.Resources.commercial_40px;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 242);
+            this.button3.Location = new System.Drawing.Point(-1, 292);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(246, 54);
             this.button3.TabIndex = 19;
@@ -175,7 +132,7 @@
             this.button4.BackColor = System.Drawing.Color.DodgerBlue;
             this.button4.Image = global::project00.Properties.Resources.card_payment_64px;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 188);
+            this.button4.Location = new System.Drawing.Point(3, 227);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(246, 59);
             this.button4.TabIndex = 18;
@@ -188,7 +145,7 @@
             this.button2.BackColor = System.Drawing.Color.DodgerBlue;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 133);
+            this.button2.Location = new System.Drawing.Point(3, 162);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(246, 59);
             this.button2.TabIndex = 17;
@@ -201,7 +158,7 @@
             this.btdetails.BackColor = System.Drawing.Color.DodgerBlue;
             this.btdetails.Image = ((System.Drawing.Image)(resources.GetObject("btdetails.Image")));
             this.btdetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btdetails.Location = new System.Drawing.Point(3, 86);
+            this.btdetails.Location = new System.Drawing.Point(3, 101);
             this.btdetails.Name = "btdetails";
             this.btdetails.Size = new System.Drawing.Size(246, 54);
             this.btdetails.TabIndex = 16;
@@ -214,7 +171,7 @@
             this.bthome.BackColor = System.Drawing.Color.DodgerBlue;
             this.bthome.Image = ((System.Drawing.Image)(resources.GetObject("bthome.Image")));
             this.bthome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bthome.Location = new System.Drawing.Point(3, 32);
+            this.bthome.Location = new System.Drawing.Point(3, 39);
             this.bthome.Name = "bthome";
             this.bthome.Size = new System.Drawing.Size(246, 59);
             this.bthome.TabIndex = 12;
@@ -286,7 +243,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(358, -3);
+            this.btnRefresh.Location = new System.Drawing.Point(359, 4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 36);
             this.btnRefresh.TabIndex = 14;
@@ -657,9 +614,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;

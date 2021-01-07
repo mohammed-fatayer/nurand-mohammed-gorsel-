@@ -1,4 +1,5 @@
-﻿using System;
+﻿using project00.model;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -72,6 +73,22 @@ namespace project00
             {
 
                 throw;
+            }
+        }
+        public DataTable GetMesInfo(int ownerID)
+        {
+            try
+            {
+                string query = $"select *from [Massage system]";
+                if (ownerID > 0)
+                {
+                    query += " where a.ownerid = " + ownerID;
+                }
+                return dbHelper.ExecuteQuery(query);  //its static, can call method direcly
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("GetPaymentInfo Error: " + ex.Message);
             }
         }
         public DataTable deletemassage(string ownerid, string customerid)
