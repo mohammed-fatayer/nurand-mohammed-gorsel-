@@ -6,7 +6,7 @@ namespace project00.Models
 {
     public class Customer : Person
     {
-    
+
 
         public int customerID { get; set; }
         public int CustomerID
@@ -155,7 +155,7 @@ namespace project00.Models
                     SqlCommand sqlCommand = new SqlCommand(query, Connection);
 
                     DataTable dt = new DataTable();
-                    SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);    
+                    SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
                     adapter.Fill(dt);
 
                     return dt;
@@ -169,7 +169,71 @@ namespace project00.Models
             {
                 throw new Exception("Log In Error: " + ex.Message);
             }
-        }   
+        }
+        public DataTable newcustomerinfo(string firstname, string lastname, string email, string gender, string password, string address)
+        {
+            try
+            {
 
+
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+
+
+
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO customer" + "(Password,firstname,LastName,Gender,Email,Address)"
+                        + "values(@Password,@firstname,@LastName,@Gender,@Email,@Address) ", connection);
+
+
+                    cmd.Parameters.Add("@password", System.Data.SqlDbType.NVarChar);
+                    cmd.Parameters.Add("@firstname", System.Data.SqlDbType.NVarChar);
+                    cmd.Parameters.Add("@lastname", System.Data.SqlDbType.NVarChar);
+                    cmd.Parameters.Add("@email", System.Data.SqlDbType.NVarChar);
+                    cmd.Parameters.Add("@gender", System.Data.SqlDbType.NVarChar);
+                    cmd.Parameters.Add("@address", System.Data.SqlDbType.NVarChar);
+
+                    cmd.Parameters["@password"].Value = password;
+                    cmd.Parameters["@firstname"].Value = firstname;
+                    cmd.Parameters["@lastname"].Value = lastname;
+                    cmd.Parameters["@email"].Value = email;
+                    cmd.Parameters["@gender"].Value = gender;
+
+                    cmd.Parameters["@address"].Value = address;
+
+
+
+
+
+                    int RowsAffected = cmd.ExecuteNonQuery();
+
+
+
+
+
+                    connection.Close();
+
+                    return null;
+
+                }
+                else
+                {
+                    throw new Exception("can't connect to server");
+                }
+
+
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("error in adding new customer");
+
+
+            }
+
+        }
     }
 }

@@ -34,11 +34,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.tbHouse = new System.Windows.Forms.TextBox();
+            this.tbAdress = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
@@ -62,11 +60,9 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.tbHouse);
+            this.groupBox1.Controls.Add(this.tbAdress);
             this.groupBox1.Controls.Add(this.tbPassword);
             this.groupBox1.Controls.Add(this.tbEmail);
             this.groupBox1.Controls.Add(this.tbLastName);
@@ -98,7 +94,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(283, 313);
+            this.button3.Location = new System.Drawing.Point(278, 292);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(57, 29);
             this.button3.TabIndex = 22;
@@ -108,12 +104,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(199, 313);
+            this.button2.Location = new System.Drawing.Point(194, 292);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(57, 29);
             this.button2.TabIndex = 21;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
@@ -133,23 +130,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(157, 239);
-            this.maskedTextBox1.Mask = "(999) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(206, 23);
-            this.maskedTextBox1.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 245);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 17);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Phone: ";
             // 
             // button1
             // 
@@ -172,13 +152,13 @@
             this.comboBox1.Size = new System.Drawing.Size(206, 24);
             this.comboBox1.TabIndex = 14;
             // 
-            // tbHouse
+            // tbAdress
             // 
-            this.tbHouse.Location = new System.Drawing.Point(157, 274);
-            this.tbHouse.Multiline = true;
-            this.tbHouse.Name = "tbHouse";
-            this.tbHouse.Size = new System.Drawing.Size(206, 24);
-            this.tbHouse.TabIndex = 13;
+            this.tbAdress.Location = new System.Drawing.Point(157, 240);
+            this.tbAdress.Multiline = true;
+            this.tbAdress.Name = "tbAdress";
+            this.tbAdress.Size = new System.Drawing.Size(206, 24);
+            this.tbAdress.TabIndex = 13;
             // 
             // tbPassword
             // 
@@ -216,11 +196,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(55, 281);
+            this.label8.Location = new System.Drawing.Point(55, 247);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 17);
+            this.label8.Size = new System.Drawing.Size(64, 17);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Rental House:";
+            this.label8.Text = "Address:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -305,11 +286,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox tbHouse;
+        private System.Windows.Forms.TextBox tbAdress;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.TextBox tbLastName;

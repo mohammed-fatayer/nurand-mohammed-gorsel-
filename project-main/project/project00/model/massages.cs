@@ -1,0 +1,142 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace project00
+{
+    class massages
+    {
+        protected string  massage { get; set; }
+
+       
+        protected static string connectionString;
+        public massages()
+        {
+            connectionString = ConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString;
+        }
+
+        public DataTable sendmassage(string massage, string ownerid, string customerid)
+        {
+            try
+            {
+
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+
+
+
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO massage " + "(massage,OwnerID,CustomerID)" + "values( @massage,@OwnerID,@CustomerID) ", connection);
+
+
+                    cmd.Parameters.Add("@massage", System.Data.SqlDbType.NVarChar);
+                    cmd.Parameters.Add("@ownerid", System.Data.SqlDbType.NVarChar);
+                    cmd.Parameters.Add("@customerid", System.Data.SqlDbType.NVarChar);
+
+
+                    cmd.Parameters["@massage"].Value = massage;
+                    cmd.Parameters["@ownerid"].Value = ownerid;
+                    cmd.Parameters["@customerid"].Value = customerid;
+
+
+
+
+
+
+                    int RowsAffected = cmd.ExecuteNonQuery();
+
+
+
+
+
+                    connection.Close();
+                    return null;
+
+                }
+                else
+                {
+                    throw new Exception("can't connect to server");
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public DataTable deletemassage(string ownerid, string customerid)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    using (SqlCommand command = new SqlCommand("DELETE FROM [Massage] WHERE ownerid = ownerid and customerid = customerid", con))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    con.Close();
+
+                }
+                return null;
+            }
+           
+                catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+      /*  public DataTable getmassage(string ownerid, string customerid)
+        {
+            try
+            {
+               
+                SqlConnection Connection = new SqlConnection(connectionString);
+                Connection.Open();
+
+                if (Connection.State == ConnectionState.Open)
+                {
+                    
+                    string query = $"select * from massage where customerID = customerid and ownerid = ownerid and massage";
+
+                    SqlCommand sqlCommand = new SqlCommand(query, Connection);
+
+                    string dt = new string();
+                    SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+                    adapter.Fill(dt);
+
+                    return dt.Rows.GetType();
+
+                    return dt;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Log In Error: " + ex.Message);
+            }*/
+        }
+    }
+  
+
+
+
+
+
+

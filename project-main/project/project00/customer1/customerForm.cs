@@ -1,4 +1,5 @@
-﻿using System;
+﻿using project00.Models;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -34,8 +35,8 @@ namespace project00
             tbLastName.Text = null;
             tbEmail.Text = null;
             tbPassword.Text = null;
-            tbHouse.Text = null;
-            maskedTextBox1.Text = null;
+            tbAdress.Text = null;
+            
             comboBox1.Text = null;
         }
 
@@ -43,6 +44,36 @@ namespace project00
         {
             //showForm sform = new showForm();
             //sform.Show();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Customer c = new Customer();
+            string firstname = tbName.Text.Trim();
+            string lastname = tbLastName.Text.Trim();
+            string email = tbEmail.Text.Trim();
+            string gender = comboBox1.Text;
+            string password = tbPassword.Text.Trim();
+            string address = tbAdress.Text;
+
+
+
+            var result = c.newcustomerinfo(firstname, lastname, email, gender, password, address);
+            if (result == null)
+            {
+                MessageBox.Show("your registration in done you can log in using your firstname and password");
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("wrong information");
+            }
         }
     }
 }
