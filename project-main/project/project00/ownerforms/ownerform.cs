@@ -9,11 +9,10 @@ namespace project00
     {
         Person person = null;
         int ID = -1;
-        public ownerform()
+        public ownerform(Person p)
         {
             InitializeComponent();
-            
-
+            person = p;
         }
 
 

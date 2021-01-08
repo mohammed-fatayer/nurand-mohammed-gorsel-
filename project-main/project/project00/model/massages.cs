@@ -13,9 +13,9 @@ namespace project00
 {
     class massages
     {
-        protected string  massage { get; set; }
+        protected string massage { get; set; }
 
-       
+
         protected static string connectionString;
         public massages()
         {
@@ -107,49 +107,67 @@ namespace project00
                 }
                 return null;
             }
-           
-                catch (Exception)
+
+            catch (Exception)
             {
 
                 throw;
             }
 
         }
-
-      /*  public DataTable getmassage(string ownerid, string customerid)
+        public  String[] getmassage(string ownerid, string customerid)
         {
+
+
+             
             try
             {
-               
-                SqlConnection Connection = new SqlConnection(connectionString);
-                Connection.Open();
 
-                if (Connection.State == ConnectionState.Open)
+                var myList = new List<string>();
+                string[] str;
+                SqlConnection connection = new SqlConnection(connectionString);
+                SqlCommand command =
+  new SqlCommand("select * from massage WHERE CustomerId=customerid and ownerid = ownerid", connection);
+                connection.Open();
+
+
+                SqlDataReader read = command.ExecuteReader();
+
+                while (read.Read())
                 {
+
+                   
+                    string massage = (read["massage"].ToString());
+
                     
-                    string query = $"select * from massage where customerID = customerid and ownerid = ownerid and massage";
 
-                    SqlCommand sqlCommand = new SqlCommand(query, Connection);
+                    
+                    myList.Add(massage);
+                    
 
-                    string dt = new string();
-                    SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
-                    adapter.Fill(dt);
-
-                    return dt.Rows.GetType();
-
-                    return dt;
+                  
+                 
+                    
                 }
-                else
-                {
-                    return null;
-                }
+                str = myList.ToArray();
+               
+                    read.Close();
+                    connection.Close();
+                    return str;
+                    ;
+                
+
+               
+               
+               
             }
             catch (Exception ex)
             {
-                throw new Exception("Log In Error: " + ex.Message);
-            }*/
+                throw new Exception(ex.Message);
+            }
         }
     }
+}
   
 
 

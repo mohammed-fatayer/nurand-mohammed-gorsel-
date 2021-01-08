@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -9,14 +10,14 @@ namespace project00.model
     public static class dbHelper
     {   //d2 add static as well, str qurey vececez, give qurey as a parameter i
         // if other obj have qurey so its connect here and no need to update       
-
+        public static string connectionString;
         // SELECT
         public static DataTable ExecuteQuery(string query)
         {
             try
             {
                 //d3 cnt to DB
-                string connectionString = "Server = DESKTOP-IPUP7LB; Database = sms; Trusted_Connection = True";
+                connectionString = ConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString;
                 SqlConnection Connection = new SqlConnection(connectionString);
                 Connection.Open();
 

@@ -183,16 +183,9 @@ namespace project00
         private void button2_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Message";
-            massages obj = new massages();
-            dgvData.DataSource = obj.GetMesInfo(0);
-
-            try
-            {
-                UpdateBorder(((Button)sender).Name);
-            }
-            catch (Exception)
-            {
-            }
+            messageform ms = new messageform();
+            ms.Show();
+           
         }
 
         private void button4_Click(object sender, EventArgs e)

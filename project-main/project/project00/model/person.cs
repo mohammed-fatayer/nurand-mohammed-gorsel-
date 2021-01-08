@@ -62,11 +62,7 @@ namespace project00.Models
                 {
                     Console.WriteLine($"come back soon student{p.firstname}");
                 }
-                if (p is accommodation)
-
-                {
-                    Console.WriteLine($"come back soon student{p.firstname}");
-                }
+               
 
             }
             catch (Exception ex)

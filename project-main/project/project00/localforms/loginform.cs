@@ -35,7 +35,7 @@ namespace project00
                             label3.ForeColor = Color.Green;
                             label3.Text = ("you are in");
                             this.Hide();
-                            ownerform oform = new ownerform();
+                            ownerform oform = new ownerform(result);
                             oform.Show();
                         }
                         else

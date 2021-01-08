@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using System.Timers;
 namespace project00
 {
     static class Program
@@ -13,10 +13,10 @@ namespace project00
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new loginform());
-
-
+          
         }
 
+       
     }
 
 

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using project00.Models;
+using System;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
-
 namespace project00
 {
     public partial class messageform : Form
@@ -10,14 +12,18 @@ namespace project00
         {
             InitializeComponent();
             TextBox textBox1 = new TextBox();
-            var timer = new System.Timers.Timer();
-            timer.Interval = 5000; // every 5 seconds
-           
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Interval = 3000;
+            timer.Elapsed += timer_Elapsed;
             timer.Start();
 
 
+            TextBox.CheckForIllegalCrossThreadCalls = false;
+
         }
-     
+
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "")
@@ -25,6 +31,10 @@ namespace project00
 
                 return;
             }
+
+            owner o = new owner();
+            
+            
             string massage = textBox1.Text;
             string ownerid = textBox3.Text;
             string customerid = textBox4.Text;
@@ -33,7 +43,7 @@ namespace project00
             if (result == null)
             {
                 passingtext = textBox1.Text;
-                textBox2.Text = textBox2.Text + passingtext + Environment.NewLine;
+                textBox2.Text =  textBox2.Text + passingtext + Environment.NewLine;
                 textBox1.Text = null;
             }
             else
@@ -61,22 +71,32 @@ namespace project00
             
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
+
+
+       
+        private void button3_Click(object sender, EventArgs e)
+        {
         }
 
-        private void textBox2_TextChanged_update(object sender, EventArgs e)
+        private void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
+            if (textBox3.Text != "" && textBox4.Text != "")
+            {
 
-        }
+                textBox2.Text = null;
+                string ownerid = textBox3.Text;
+                string customerid = textBox4.Text;
+                massages ms = new massages();
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            string ownerid = textBox3.Text;
-            string customerid = textBox4.Text;
-            massages ms = new massages();
-           // textBox1.Text = ms.getmassage( ownerid, customerid);
+                for (int i = 0; i < ms.getmassage(ownerid, customerid).Length; i++)
+                {
+
+                    textBox2.Text = textBox2.Text + ms.getmassage(ownerid, customerid)[i] + Environment.NewLine;
+
+                }
+            };
+
         }
     }
 }
