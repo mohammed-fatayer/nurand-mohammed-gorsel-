@@ -191,10 +191,13 @@ namespace project00
         private void button4_Click(object sender, EventArgs e)
         {
             
-            
             try
             {
                 UpdateBorder(((Button)sender).Name);
+                Customer o = (Customer)person;
+                Customer obj = new Customer();
+                PaymentForm pForm = new PaymentForm(o, null, "add"); //e5
+                pForm.Show();
             }
             catch (Exception)
             {
@@ -341,7 +344,13 @@ namespace project00
         {
 
         }
-    
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            loginform lnform = new loginform();
+            lnform.Show();
+            this.Hide();
+        }
     }
 
 }

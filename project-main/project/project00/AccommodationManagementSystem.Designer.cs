@@ -75,6 +75,7 @@
             this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -97,6 +98,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.button4);
             this.splitContainer1.Panel1.Controls.Add(this.button2);
@@ -547,6 +549,20 @@
             this.updateToolStripMenuItem1.Text = "Update";
             this.updateToolStripMenuItem1.Click += new System.EventHandler(this.updateToolStripMenuItem1_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.button1.Image = global::project00.Properties.Resources.icons8_login_80;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 384);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(246, 54);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AccommodationManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,5 +640,6 @@
         private System.Windows.Forms.Button BtnAddAcc;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem1;
+        private System.Windows.Forms.Button button1;
     }
 }

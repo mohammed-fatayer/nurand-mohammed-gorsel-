@@ -29,58 +29,58 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.rTbnSellerID = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.rTbnCustID = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbnAmount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.tbnStatus = new System.Windows.Forms.ComboBox();
+            this.rTbnAccID = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.tbPeriod = new System.Windows.Forms.TextBox();
+            this.cbPaymentSelect = new System.Windows.Forms.ComboBox();
+            this.tbnRemain = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.tbLocation = new System.Windows.Forms.TextBox();
+            this.tbnPaymentID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.richTextBox3);
+            this.groupBox1.Controls.Add(this.rTbnSellerID);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.comboBox4);
             this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.richTextBox2);
+            this.groupBox1.Controls.Add(this.rTbnCustID);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbnAmount);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.tbnStatus);
+            this.groupBox1.Controls.Add(this.rTbnAccID);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.tbPeriod);
+            this.groupBox1.Controls.Add(this.cbPaymentSelect);
+            this.groupBox1.Controls.Add(this.tbnRemain);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.tbLocation);
+            this.groupBox1.Controls.Add(this.tbnPaymentID);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(8, 9);
@@ -90,14 +90,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Payment Details";
             // 
-            // richTextBox3
+            // rTbnSellerID
             // 
-            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox3.Location = new System.Drawing.Point(177, 116);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(170, 26);
-            this.richTextBox3.TabIndex = 46;
-            this.richTextBox3.Text = "";
+            this.rTbnSellerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rTbnSellerID.Location = new System.Drawing.Point(177, 116);
+            this.rTbnSellerID.Name = "rTbnSellerID";
+            this.rTbnSellerID.Size = new System.Drawing.Size(170, 26);
+            this.rTbnSellerID.TabIndex = 46;
+            this.rTbnSellerID.Text = "";
             // 
             // label9
             // 
@@ -155,14 +155,14 @@
             this.label4.TabIndex = 41;
             this.label4.Text = "Payment Date : ";
             // 
-            // richTextBox2
+            // rTbnCustID
             // 
-            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(177, 189);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(170, 26);
-            this.richTextBox2.TabIndex = 40;
-            this.richTextBox2.Text = "";
+            this.rTbnCustID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rTbnCustID.Location = new System.Drawing.Point(177, 189);
+            this.rTbnCustID.Name = "rTbnCustID";
+            this.rTbnCustID.Size = new System.Drawing.Size(170, 26);
+            this.rTbnCustID.TabIndex = 40;
+            this.rTbnCustID.Text = "";
             // 
             // label5
             // 
@@ -174,13 +174,13 @@
             this.label5.TabIndex = 39;
             this.label5.Text = "Customer ID :";
             // 
-            // textBox1
+            // tbnAmount
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(177, 273);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 38;
+            this.tbnAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnAmount.Location = new System.Drawing.Point(177, 273);
+            this.tbnAmount.Name = "tbnAmount";
+            this.tbnAmount.Size = new System.Drawing.Size(100, 23);
+            this.tbnAmount.TabIndex = 38;
             // 
             // label2
             // 
@@ -200,30 +200,30 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(237, 23);
             this.dateTimePicker1.TabIndex = 36;
             // 
-            // comboBox2
+            // tbnStatus
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.tbnStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnStatus.FormattingEnabled = true;
+            this.tbnStatus.Items.AddRange(new object[] {
             "Paid",
             "Inprgress",
             "Cancelled",
             "Pending",
             "",
             ""});
-            this.comboBox2.Location = new System.Drawing.Point(177, 308);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(170, 24);
-            this.comboBox2.TabIndex = 35;
+            this.tbnStatus.Location = new System.Drawing.Point(177, 308);
+            this.tbnStatus.Name = "tbnStatus";
+            this.tbnStatus.Size = new System.Drawing.Size(170, 24);
+            this.tbnStatus.TabIndex = 35;
             // 
-            // richTextBox1
+            // rTbnAccID
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(177, 151);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(170, 26);
-            this.richTextBox1.TabIndex = 34;
-            this.richTextBox1.Text = "";
+            this.rTbnAccID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rTbnAccID.Location = new System.Drawing.Point(177, 151);
+            this.rTbnAccID.Name = "rTbnAccID";
+            this.rTbnAccID.Size = new System.Drawing.Size(170, 26);
+            this.rTbnAccID.TabIndex = 34;
+            this.rTbnAccID.Text = "";
             // 
             // label8
             // 
@@ -255,28 +255,28 @@
             this.label6.TabIndex = 31;
             this.label6.Text = "Payment Selection :";
             // 
-            // comboBox1
+            // cbPaymentSelect
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbPaymentSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPaymentSelect.FormattingEnabled = true;
+            this.cbPaymentSelect.Items.AddRange(new object[] {
             "Cash",
             "Payroll Card",
             "Visa Card",
             "Direct Deposit",
             "PayCheck"});
-            this.comboBox1.Location = new System.Drawing.Point(177, 233);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(170, 24);
-            this.comboBox1.TabIndex = 30;
+            this.cbPaymentSelect.Location = new System.Drawing.Point(177, 233);
+            this.cbPaymentSelect.Name = "cbPaymentSelect";
+            this.cbPaymentSelect.Size = new System.Drawing.Size(170, 24);
+            this.cbPaymentSelect.TabIndex = 30;
             // 
-            // tbPeriod
+            // tbnRemain
             // 
-            this.tbPeriod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPeriod.Location = new System.Drawing.Point(177, 352);
-            this.tbPeriod.Name = "tbPeriod";
-            this.tbPeriod.Size = new System.Drawing.Size(100, 23);
-            this.tbPeriod.TabIndex = 28;
+            this.tbnRemain.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnRemain.Location = new System.Drawing.Point(177, 352);
+            this.tbnRemain.Name = "tbnRemain";
+            this.tbnRemain.Size = new System.Drawing.Size(100, 23);
+            this.tbnRemain.TabIndex = 28;
             // 
             // label3
             // 
@@ -317,14 +317,15 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tbLocation
+            // tbnPaymentID
             // 
-            this.tbLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLocation.Location = new System.Drawing.Point(177, 39);
-            this.tbLocation.Name = "tbLocation";
-            this.tbLocation.Size = new System.Drawing.Size(100, 23);
-            this.tbLocation.TabIndex = 2;
+            this.tbnPaymentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnPaymentID.Location = new System.Drawing.Point(177, 39);
+            this.tbnPaymentID.Name = "tbnPaymentID";
+            this.tbnPaymentID.Size = new System.Drawing.Size(100, 23);
+            this.tbnPaymentID.TabIndex = 2;
             // 
             // label1
             // 
@@ -353,29 +354,29 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox rTbnSellerID;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox rTbnCustID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbnAmount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ComboBox tbnStatus;
+        private System.Windows.Forms.RichTextBox rTbnAccID;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox tbPeriod;
+        private System.Windows.Forms.ComboBox cbPaymentSelect;
+        private System.Windows.Forms.TextBox tbnRemain;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox tbLocation;
+        private System.Windows.Forms.TextBox tbnPaymentID;
         private System.Windows.Forms.Label label1;
     }
 }

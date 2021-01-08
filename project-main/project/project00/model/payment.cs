@@ -6,39 +6,43 @@ namespace project00.model
 {
     public class Payment
     {
-        int payingID;
-        string payingSelection;
+        int paymentID;
+        DateTime paymentDate;
+        int ownerID;
+        int accommodationID;  
+        int customerID;
+        string paymentSelection;
         int amount;
         string status;
         int remain;
-        DateTime payingDate;
-        int accommodationID;
-        int customerID;
-        private object connectionString;
 
         public Payment()
         {
         }
 
-        // def const
-        //public Payment()
-        //{
-        //    connectionString = ConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString;
-        //}
-
-        public Payment(int payingID, string payingSelection, int amount, string status, int remain,
-            DateTime payingDate, int accommodationID, int customerID, object connectionString)
+        public Payment(int paymentID, DateTime paymentDate, int ownerID, int accommodationID, int customerID,
+            string paymentSelection, int amount, string status, int remain)
         {
-            this.payingID = payingID;
-            this.payingSelection = payingSelection;
-            this.amount = amount;
-            this.status = status;
-            this.remain = remain;
-            this.payingDate = payingDate;
-            this.accommodationID = accommodationID;
-            this.customerID = customerID;
-            this.connectionString = connectionString;
+            this.PaymentID = paymentID;
+            this.PaymentDate = paymentDate;
+            this.OwnerID = ownerID;
+            this.AccommodationID = accommodationID;
+            this.CustomerID = customerID;
+            this.PaymentSelection = paymentSelection;
+            this.Amount = amount;
+            this.Status = status;
+            this.Remain = remain;
         }
+
+        public int PaymentID { get => paymentID; set => paymentID = value; }
+        public DateTime PaymentDate { get => paymentDate; set => paymentDate = value; }
+        public int OwnerID { get => ownerID; set => ownerID = value; }
+        public int AccommodationID { get => accommodationID; set => accommodationID = value; }
+        public int CustomerID { get => customerID; set => customerID = value; }
+        public string PaymentSelection { get => paymentSelection; set => paymentSelection = value; }
+        public int Amount { get => amount; set => amount = value; }
+        public string Status { get => status; set => status = value; }
+        public int Remain { get => remain; set => remain = value; }
 
         public DataTable GetPaymentInfo()
         {
@@ -50,6 +54,23 @@ namespace project00.model
             catch (Exception ex)
             {
                 throw new Exception("GetPaymentInfo Error: " + ex.Message);
+            }
+        }
+        public int PaymentAdd(Payment obj)
+        {
+            try
+            {
+                string query = $"INSERT INTO payment([Paymentdate], [CustomersID]," +
+                    $" [OwnerID], [AccommodationID], [PaymentSelection]," +
+                    $" [Amount],[Status],[Remain])VALUES('{obj.PaymentDate}'," +
+                    $"'{obj.CustomerID}','{obj.OwnerID}',{obj.AccommodationID}," +
+                    $"{obj.paymentSelection},{obj.Amount},{obj.Status},{obj.Remain});";
+                return dbHelper.ExecuteNonQuery(query);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
             }
         }
     }

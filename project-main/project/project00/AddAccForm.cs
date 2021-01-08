@@ -27,10 +27,12 @@ namespace project00
             {
                 if(acc != null)
                 {
+                    cbAccSelect.SelectedValue = acc.Accommodation_selection;
                     cbOperation.SelectedValue = acc.Operation;
                     txtDetail.Text = acc.Details_accommodation;
                     txtPrice.Text = acc.Price.ToString();
                     txtPrice.Text = acc.Period.ToString();
+                    txtOwnerID.Text = acc.OwnerID.ToString();
                     
                     actionForm = action;
                 }
@@ -46,6 +48,7 @@ namespace project00
             if(ownerInfo.OwnerID > 0)
             {
                 accommodation acc = new accommodation();
+                acc.Accommodation_selection = cbAccSelect.Text;
                 acc.Operation = cbOperation.Text;
                 acc.Details_accommodation = txtDetail.Text;
                 //acc.LocationID = cbLocation.SelectedIndex;
@@ -67,9 +70,12 @@ namespace project00
 
         private void ClearData()
         {
+            cbAccSelect.Text = "";
+            cbOperation.Text = "";
             txtDetail.Text = "";
             txtPrice.Text = "";
             txtPeriod.Text = "";
+            txtOwnerID.Text = "";
         }
 
       
