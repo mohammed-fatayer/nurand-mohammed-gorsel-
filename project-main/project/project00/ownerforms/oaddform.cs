@@ -19,15 +19,15 @@ namespace project00
             string gender = comboBox1.Text;
             string password = textBox6.Text.Trim();
             string address = textBox3.Text;
-            
 
 
-            var result = o.newownerinfo(firstname,lastname,email,gender,  password, address);
+
+            var result = o.newownerinfo(firstname, lastname, email, gender, password, address);
             if (result == null)
             {
                 MessageBox.Show("your registration in done you can log in using your firstname and password");
                 this.Close();
-                
+
             }
             else
             {

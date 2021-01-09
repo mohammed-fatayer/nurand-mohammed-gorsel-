@@ -208,7 +208,6 @@
             "Paid",
             "Inprgress",
             "Cancelled",
-            "Pending",
             "",
             ""});
             this.tbnStatus.Location = new System.Drawing.Point(177, 308);
@@ -344,6 +343,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Name = "PaymentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaymentForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

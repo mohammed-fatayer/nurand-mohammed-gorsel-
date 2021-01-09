@@ -1,12 +1,5 @@
 ﻿using project00.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace project00
@@ -19,13 +12,13 @@ namespace project00
         {
         }
 
-        public AddAccForm(owner obj, accommodation acc,string action) //e2
+        public AddAccForm(owner obj, accommodation acc, string action) //e2
         {
             InitializeComponent();
             this.ownerInfo = obj; //e3
             if (action == "edit")
             {
-                if(acc != null)
+                if (acc != null)
                 {
                     cbAccSelect.SelectedValue = acc.Accommodation_selection;
                     cbOperation.SelectedValue = acc.Operation;
@@ -33,7 +26,7 @@ namespace project00
                     txtPrice.Text = acc.Price.ToString();
                     txtPrice.Text = acc.Period.ToString();
                     txtOwnerID.Text = acc.OwnerID.ToString();
-                    
+
                     actionForm = action;
                 }
             }
@@ -45,7 +38,7 @@ namespace project00
         //e4
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(ownerInfo.OwnerID > 0)
+            if (ownerInfo.OwnerID > 0)
             {
                 accommodation acc = new accommodation();
                 acc.Accommodation_selection = cbAccSelect.Text;
@@ -55,15 +48,15 @@ namespace project00
                 acc.Price = Convert.ToInt32(txtPrice.Text);
                 acc.Period = Convert.ToInt32(txtPeriod.Text);
                 acc.OwnerID = ownerInfo.OwnerID;
-                if(actionForm != "" && actionForm != "edit")
+                if (actionForm != "" && actionForm != "edit")
                     acc.AccommodationAdd(acc);
                 else
                     //Edit
 
-                ClearData();
+                    ClearData();
             }
 
-            
+
             this.Hide();
 
         }
@@ -78,6 +71,6 @@ namespace project00
             txtOwnerID.Text = "";
         }
 
-      
+
     }
 }

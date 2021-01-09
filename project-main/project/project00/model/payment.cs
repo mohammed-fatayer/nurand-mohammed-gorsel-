@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Configuration;
 using System.Data;
 
 namespace project00.model
@@ -9,7 +8,7 @@ namespace project00.model
         int paymentID;
         DateTime paymentDate;
         int ownerID;
-        int accommodationID;  
+        int accommodationID;
         int customerID;
         string paymentSelection;
         int amount;
@@ -44,11 +43,11 @@ namespace project00.model
         public string Status { get => status; set => status = value; }
         public int Remain { get => remain; set => remain = value; }
 
-        public DataTable GetPaymentInfo()
+        public DataTable GetPaymentInfo(int id)
         {
             try
             {
-                string query = $"SELECT *from payment";
+                string query = $"select *from payment where CustomersID = " + id;
                 return dbHelper.ExecuteQuery(query);  //its static, can call method direcly
             }
             catch (Exception ex)

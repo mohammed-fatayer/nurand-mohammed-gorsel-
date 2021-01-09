@@ -1,12 +1,5 @@
 ﻿using project00.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace project00
@@ -44,10 +37,10 @@ namespace project00
 
         private void btnUpdateCust_Click(object sender, EventArgs e)
         {
-           
+
         }
-    
-             private void clearData()
+
+        private void clearData()
         {
             tbName.Text = "";
             tbLastName.Text = "";
@@ -59,7 +52,7 @@ namespace project00
 
         private void btnUpdateCust_Click_1(object sender, EventArgs e)
         {
- if (customerInfo.customerID > 0)
+            if (customerInfo.customerID > 0)
             {
                 Customer cust = new Customer();
                 cust.Gender = CBgender.Text;
@@ -69,17 +62,17 @@ namespace project00
                 cust.Password = tbPassword.Text;
                 //cust.PhoneNumber = Convert.ToInt32(mtPhone.Text);
                 if (actionForm != "" && actionForm != "edit")
-                   cust.CustomerAdd(cust);
+                    cust.CustomerAdd(cust);
                 else
-                 
+
                     //Edit
 
                     clearData();
             }
-       
-                this.Hide();
+
+            this.Hide();
         }
     }
-} 
+}
 
 

@@ -1,7 +1,6 @@
 ﻿using project00.model;
 using System;
 using System.Data;
-using System.Data.SqlClient;
 
 namespace project00.Models
 {
@@ -112,17 +111,37 @@ namespace project00.Models
                 throw new Exception("GetPaymentInfo Error: " + ex.Message);
             }
         }
+
+        public int AccommodationDelete(int eID)
+        {
+            try
+            {
+                string query = $"Delete from Accommodation where AccommodationID={eID}; DELETE Accommodation WHERE AccommodationID={eID}";
+                return dbHelper.ExecuteNonQuery(query);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
         public DataTable GetAccByID(int ID)
         {
             try
             {
-                string query = $"select * from Accommodation a where a.AccommodationID="+ID;                
+                string query = $"select * from Accommodation a where a.AccommodationID=" + ID;
                 return dbHelper.ExecuteQuery(query);  //its static, can call method direcly
             }
             catch (Exception ex)
             {
                 throw new Exception("GetAccommodationInfo Error: " + ex.Message);
             }
+        }
+
+        internal object GetAccInfo()
+        {
+            throw new NotImplementedException();
         }
 
         //public accommodation GetAccInfoByID(int aID)

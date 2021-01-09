@@ -10,7 +10,8 @@ namespace project00
     {
         Person person = null;
         int ID = -1;//b1 -1:choose nothing
-      
+        int id = -1;//b1 -1:choose nothing
+
         public AccommodationManagementSystem(Person p)
         {
             InitializeComponent();
@@ -154,7 +155,7 @@ namespace project00
         {
             lblTitle.Text = "Accommodation Details";
             Payment obj = new Payment();
-            dgvData.DataSource = obj.GetPaymentInfo();
+            //dgvData.DataSource = obj.GetPaymentInfo();
             try
             {
                 UpdateBorder(((Button)sender).Name);
@@ -169,7 +170,7 @@ namespace project00
         {
             lblTitle.Text = "Payment Details";
             Payment obj = new Payment();
-            dgvData.DataSource = obj.GetPaymentInfo();
+            dgvData.DataSource = obj.GetPaymentInfo(id);
             try
             {
                 UpdateBorder(((Button)sender).Name);
@@ -185,12 +186,12 @@ namespace project00
             lblTitle.Text = "Message";
             messageform ms = new messageform();
             ms.Show();
-           
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 UpdateBorder(((Button)sender).Name);
@@ -226,16 +227,16 @@ namespace project00
             {
                 // c1
                 dgvData.ClearSelection();
-                if (e.RowIndex!=-1 && e.ColumnIndex!=-1)
+                if (e.RowIndex != -1 && e.ColumnIndex != -1)
                 {
-                    if (e.Button==MouseButtons.Right)//clk right,show sth
+                    if (e.Button == MouseButtons.Right)//clk right,show sth
                     {
                         //c2
                         dgvData.Rows[e.RowIndex].Selected = true;
                         //b2 
                         //var accommodationID = int.Parse(dgvData.Rows[e.RowIndex].Cells["AccomodationID"].Value.ToString());
                         //MessageBox.Show(accommodationID.ToString());
-                         ID  = int.Parse(dgvData.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        ID = int.Parse(dgvData.Rows[e.RowIndex].Cells[0].Value.ToString());
                         //b1 click following to screen 
                         var relativePosition = dgvData.PointToClient(Cursor.Position);
                         contextMenuStrip1.Show(dgvData, relativePosition);
@@ -272,7 +273,7 @@ namespace project00
             }
             try
             {
-                if (ID==-1)//b2 id=-1 : do nothig => ret eger varsa...
+                if (ID == -1)//b2 id=-1 : do nothig => ret eger varsa...
                 {
                     return;
                 }
@@ -285,8 +286,8 @@ namespace project00
             {
                 MessageBox.Show(ex.Message);
             }
-          
-  MessageBox.Show("Your click edit");
+
+            MessageBox.Show("Your click edit");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -296,17 +297,14 @@ namespace project00
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var acc = new accommodation();
-            acc.Accommodation_selection = "Test";
-            acc.Details_accommodation = "Test Detail";
-            acc.Operation="Test Operation";
-            acc.Price = 100;
-            acc.Period = 1;
-            acc.OwnerID = 4;
-            acc.CustomerID = 1;
-
-            acc.AccommodationAdd(acc);
-            dgvData.DataSource = acc.GetAccInfo(0);
+            //var acc = new accommodation();
+            //acc.Accommodation_selection = "Test";
+            //acc.Details_accommodation = "Test Detail";
+            //acc.Operation="Test Operation";
+            //acc.Price = 100;
+            //acc.Period = 1;
+            //acc.OwnerID = 4;
+            //acc.CustomerID = 1;
         }
 
         private void BtnAddAcc_Click(object sender, EventArgs e)
@@ -351,6 +349,40 @@ namespace project00
             lnform.Show();
             this.Hide();
         }
+
+        private void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ID == -1)
+                {
+                    return;
+                }
+
+                if (lblTitle.Text.Contains("Accommodation Details"))
+                {
+                    var dresult = MessageBox.Show("Are you sure?", "System Message", MessageBoxButtons.YesNo);
+
+                    if (dresult == DialogResult.Yes)
+                    {
+                        accommodation obj = new accommodation();
+                        var result = obj.AccommodationDelete(ID);
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Accommodation Deleted.");
+
+                            dgvData.DataSource = obj.GetAccInfo();
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 
 }

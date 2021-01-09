@@ -44,7 +44,7 @@ namespace project00
 
         private void button2_Click(object sender, EventArgs e)
         {
-            owner o = (owner)person;            
+            owner o = (owner)person;
             BindAccData(o);
         }
 
@@ -74,7 +74,7 @@ namespace project00
         {
             owner o = (owner)person;
             owner obj = new owner();
-            AddAccForm aForm = new AddAccForm(o,null,"add"); //e5
+            AddAccForm aForm = new AddAccForm(o, null, "add"); //e5
             aForm.Show();
 
         }
@@ -116,7 +116,7 @@ namespace project00
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(ID != -1)
+            if (ID != -1)
             {
                 accommodation acc = new accommodation();
                 var dt = acc.GetAccByID(ID);
@@ -131,7 +131,7 @@ namespace project00
                     acc.Period = Convert.ToInt32(dt.Rows[0]["Period"]);
                 }
 
-                AddAccForm accForm = new AddAccForm((owner)person,acc,"edit");
+                AddAccForm accForm = new AddAccForm((owner)person, acc, "edit");
                 accForm.Show();
             }
         }

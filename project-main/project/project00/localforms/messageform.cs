@@ -1,7 +1,5 @@
 ﻿using project00.Models;
 using System;
-using System.Data.SqlClient;
-using System.Drawing;
 using System.Windows.Forms;
 namespace project00
 {
@@ -22,7 +20,7 @@ namespace project00
 
         }
 
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -33,17 +31,17 @@ namespace project00
             }
 
             owner o = new owner();
-            
-            
+
+
             string massage = textBox1.Text;
             string ownerid = textBox3.Text;
             string customerid = textBox4.Text;
             massages ms = new massages();
-            var result = ms.sendmassage(massage,ownerid,customerid);
+            var result = ms.sendmassage(massage, ownerid, customerid);
             if (result == null)
             {
                 passingtext = textBox1.Text;
-                textBox2.Text =  textBox2.Text + passingtext + Environment.NewLine;
+                textBox2.Text = textBox2.Text + passingtext + Environment.NewLine;
                 textBox1.Text = null;
             }
             else
@@ -51,7 +49,7 @@ namespace project00
                 MessageBox.Show("can not send the massage");
             }
 
-           
+
 
         }
 
@@ -63,18 +61,18 @@ namespace project00
             massages ms = new massages();
 
             var result = ms.deletemassage(ownerid, customerid);
-            if (result==null)
+            if (result == null)
             {
                 textBox1.Text = null;
                 textBox2.Text = null;
             }
-            
+
         }
 
 
 
 
-       
+
         private void button3_Click(object sender, EventArgs e)
         {
         }

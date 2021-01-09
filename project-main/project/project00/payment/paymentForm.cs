@@ -26,10 +26,10 @@ namespace project00
                     rTbnAccID.Text = pmt.AccommodationID.ToString();
                     rTbnCustID.Text = pmt.CustomerID.ToString();
                     cbPaymentSelect.SelectedValue = pmt.PaymentSelection;
-                    tbnAmount.Text = pmt.Amount.ToString();
+                    //tbnAmount.Text = pmt.Amount.ToString();
                     tbnStatus.Text = pmt.Status.ToString();
-                    tbnRemain.Text = pmt.Remain.ToString();
-                   actionForm = action;
+                    //tbnRemain.Text = pmt.Remain.ToString();
+                    actionForm = action;
                 }
             }
             else
@@ -37,7 +37,7 @@ namespace project00
                 actionForm = action;
             }
         }
-       
+
         private void button1_Click(object sender, System.EventArgs e)
         {
             if (customerInfo.customerID > 0)

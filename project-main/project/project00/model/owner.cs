@@ -44,22 +44,22 @@ namespace project00.Models
             Console.WriteLine($"ID{ownerID},name{firstname}");
         }
 
-        public DataTable newownerinfo(string firstname,string lastname , string email, string gender, string password,string address)
+        public DataTable newownerinfo(string firstname, string lastname, string email, string gender, string password, string address)
         {
             try
             {
 
-                 
+
                 SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
-               
+
                 if (connection.State == System.Data.ConnectionState.Open)
                 {
 
 
 
 
-                    SqlCommand cmd = new SqlCommand("INSERT INTO owner" + "(Password,firstname,LastName,Gender,Email,Address)"+ "values(@Password,@firstname,@LastName,@Gender,@Email,@Address) ", connection);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO owner" + "(Password,firstname,LastName,Gender,Email,Address)" + "values(@Password,@firstname,@LastName,@Gender,@Email,@Address) ", connection);
 
 
                     cmd.Parameters.Add("@password", System.Data.SqlDbType.NVarChar);
@@ -72,15 +72,15 @@ namespace project00.Models
                     cmd.Parameters["@password"].Value = password;
                     cmd.Parameters["@firstname"].Value = firstname;
                     cmd.Parameters["@lastname"].Value = lastname;
-                    cmd.Parameters["@email"].Value =email;
+                    cmd.Parameters["@email"].Value = email;
                     cmd.Parameters["@gender"].Value = gender;
-                    
+
                     cmd.Parameters["@address"].Value = address;
 
 
 
 
-                    
+
                     int RowsAffected = cmd.ExecuteNonQuery();
 
 
@@ -94,17 +94,17 @@ namespace project00.Models
                 }
                 else
                 {
-                    throw new Exception("can't connect to server"); 
+                    throw new Exception("can't connect to server");
                 }
-               
-            
+
+
             }
             catch (Exception)
             {
 
                 throw new Exception("error in adding new owner");
-                
-                
+
+
             }
         }
 

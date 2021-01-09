@@ -4,10 +4,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace project00
 {
@@ -115,11 +111,11 @@ namespace project00
             }
 
         }
-        public  String[] getmassage(string ownerid, string customerid)
+        public String[] getmassage(string ownerid, string customerid)
         {
 
 
-             
+
             try
             {
 
@@ -136,30 +132,30 @@ namespace project00
                 while (read.Read())
                 {
 
-                   
+
                     string massage = (read["massage"].ToString());
 
-                    
 
-                    
+
+
                     myList.Add(massage);
-                    
 
-                  
-                 
-                    
+
+
+
+
                 }
                 str = myList.ToArray();
-               
-                    read.Close();
-                    connection.Close();
-                    return str;
-                    ;
-                
 
-               
-               
-               
+                read.Close();
+                connection.Close();
+                return str;
+                ;
+
+
+
+
+
             }
             catch (Exception ex)
             {
@@ -168,7 +164,7 @@ namespace project00
         }
     }
 }
-  
+
 
 
 

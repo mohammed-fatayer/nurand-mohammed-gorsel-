@@ -214,6 +214,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnUpdateCust;
-        private System.Windows.Forms.Label Update;
+        private new System.Windows.Forms.Label Update;
     }
 }
