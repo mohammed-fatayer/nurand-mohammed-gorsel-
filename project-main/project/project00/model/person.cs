@@ -11,7 +11,7 @@ namespace project00.Models
         protected string email;
         protected string password;
         protected string address;
-        protected int phoneNumber;
+        protected string phoneNumber;
 
         protected static string connectionString;
 
@@ -40,7 +40,7 @@ namespace project00.Models
         public string Email { get => email; set => email = value; }
         public string Password { get => password; set => password = value; }
         public string Address { get => address; set => address = value; }
-        public int PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
+        public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
 
 
         public void display()

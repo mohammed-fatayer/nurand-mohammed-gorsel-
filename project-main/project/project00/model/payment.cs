@@ -11,9 +11,9 @@ namespace project00.model
         int accommodationID;
         int customerID;
         string paymentSelection;
-        int amount;
+        decimal amount;
         string status;
-        int remain;
+        decimal remain;
 
         public Payment()
         {
@@ -39,9 +39,9 @@ namespace project00.model
         public int AccommodationID { get => accommodationID; set => accommodationID = value; }
         public int CustomerID { get => customerID; set => customerID = value; }
         public string PaymentSelection { get => paymentSelection; set => paymentSelection = value; }
-        public int Amount { get => amount; set => amount = value; }
+        public decimal Amount { get => amount; set => amount = value; }
         public string Status { get => status; set => status = value; }
-        public int Remain { get => remain; set => remain = value; }
+        public decimal Remain { get => remain; set => remain = value; }
 
         public DataTable GetPaymentInfo(int id)
         {
@@ -59,11 +59,23 @@ namespace project00.model
         {
             try
             {
-                string query = $"INSERT INTO payment([Paymentdate], [CustomersID]," +
-                    $" [OwnerID], [AccommodationID], [PaymentSelection]," +
-                    $" [Amount],[Status],[Remain])VALUES('{obj.PaymentDate}'," +
-                    $"'{obj.CustomerID}','{obj.OwnerID}',{obj.AccommodationID}," +
-                    $"{obj.paymentSelection},{obj.Amount},{obj.Status},{obj.Remain});";
+                string query = $"INSERT INTO payment(" +
+                    $" [Paymentdate]," +
+                    $" [CustomersID]," +
+                    $" [OwnerID], " +
+                    $" [AccommodationID], " +
+                    $" [PaymentSelection]," +
+                    $" [Amount]," +
+                    $" [Status]," +
+                    $" [Remain])VALUES(" +
+                    $"'{obj.PaymentDate}'," +
+                    $"'{obj.CustomerID}'," +
+                    $"'{obj.OwnerID}'," +
+                    $"{obj.AccommodationID}," +
+                    $"'{obj.paymentSelection}'," +
+                    $"{obj.Amount}," +
+                    $"'{obj.Status}'," +
+                    $"{obj.Remain});";
                 return dbHelper.ExecuteNonQuery(query);
             }
             catch (Exception ex)

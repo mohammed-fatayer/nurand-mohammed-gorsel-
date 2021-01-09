@@ -38,6 +38,26 @@ namespace project00
             }
         }
 
+        private void tbnAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CheckKeyPress(sender, e);
+        }
+
+        private static void CheckKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                            (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void button1_Click(object sender, System.EventArgs e)
         {
             if (customerInfo.customerID > 0)
@@ -49,9 +69,9 @@ namespace project00
                 pmt.AccommodationID = customerInfo.customerID;
                 pmt.CustomerID = customerInfo.CustomerID;
                 pmt.PaymentSelection = cbPaymentSelect.Text;
-                pmt.Amount = Convert.ToInt32(tbnAmount.Text);
+                pmt.Amount = tbnAmount.Text == "" ? 0 : Convert.ToDecimal(tbnAmount.Text);
                 pmt.Status = tbnStatus.Text;
-                pmt.Remain = Convert.ToInt32(tbnRemain.Text);
+                pmt.Remain = tbnRemain.Text == "" ? 0 : Convert.ToDecimal(tbnRemain.Text);
                 if (actionForm != "" && actionForm != "edit")
                     pmt.PaymentAdd(pmt);
                 else
@@ -73,6 +93,16 @@ namespace project00
             tbnAmount.Text = "";
             tbnStatus.Text = "";
             tbnRemain.Text = "";
+        }
+
+        private void tbnAmount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbnRemain_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CheckKeyPress(sender, e);
         }
     }
 }

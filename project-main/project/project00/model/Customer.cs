@@ -37,7 +37,7 @@ namespace project00.Models
 
 
         public Customer(int customerID, string firstname, string lastname, string gender,
-            string email, string password, string address, int phoneNumber)
+            string email, string password, string address, string phoneNumber)
         {
             this.customerID = customerID;
             this.firstname = firstname;
@@ -91,15 +91,18 @@ namespace project00.Models
                 throw new Exception("error in login.");
             }
         }
-        public int CustomerAdd(Customer obj)
+        public int CustomerEdit(Customer obj)
         {
             try
             {
 
-                string query = $"INSERT INTO Customer([Gender]" +
-                    $",FirstName,LastName,Email,Password,CustomerID)VALUES" +
-                    $"('{obj.gender}','{obj.firstname}'," +
-                    $"'{obj.lastname}',{obj.email},{obj.password},{obj.CustomerID});";
+                string query = $"UPDATE Customer Set " +
+                    $"Gender='"+ obj.gender +"'," +
+                    $"FirstName='" + obj.firstname + "'," +
+                    $"LastName='" + obj.lastname + "'," +
+                    $"Email='" + obj.email + "'," +
+                    $"Password=" + obj.password +                
+                    $" WHERE CustomerID=" + obj.CustomerID;
                 return dbHelper.ExecuteNonQuery(query);
             }
             catch (Exception ex)
@@ -122,20 +125,7 @@ namespace project00.Models
                 throw new Exception(ex.Message);
             }
         }
-        public int CustomerUpdate(Customer obj)
-        {
-            try
-            {
-
-                string query = $"select *from Customer";
-                return dbHelper.ExecuteNonQuery(query);
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception(ex.Message);
-            }
-        }
+    
 
         public DataTable GetCustomerInfo(int id)
         {

@@ -25,7 +25,10 @@ namespace project00
                     CBgender.SelectedValue = cust.Gender;
                     tbEmail.Text = cust.Email;
                     tbPassword.Text = cust.Password;
-                    mtPhone.Text = cust.PhoneNumber.ToString();
+                    if(!string.IsNullOrEmpty(cust.PhoneNumber))
+                        mtPhone.Text = cust.PhoneNumber.ToString();
+                    
+
                     actionForm = action;
                 }
             }
@@ -60,9 +63,10 @@ namespace project00
                 cust.Lastname = tbLastName.Text;
                 cust.Email = tbEmail.Text;
                 cust.Password = tbPassword.Text;
-                //cust.PhoneNumber = Convert.ToInt32(mtPhone.Text);
-                if (actionForm != "" && actionForm != "edit")
-                    cust.CustomerAdd(cust);
+                cust.PhoneNumber = mtPhone.Text;
+                cust.CustomerID = customerInfo.customerID;
+                if (actionForm != "" && actionForm == "edit")
+                    cust.CustomerEdit(cust);
                 else
 
                     //Edit

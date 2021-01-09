@@ -181,6 +181,8 @@
             this.tbnAmount.Name = "tbnAmount";
             this.tbnAmount.Size = new System.Drawing.Size(100, 23);
             this.tbnAmount.TabIndex = 38;
+            this.tbnAmount.TextChanged += new System.EventHandler(this.tbnAmount_TextChanged);
+            this.tbnAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbnAmount_KeyPress);
             // 
             // label2
             // 
@@ -276,6 +278,7 @@
             this.tbnRemain.Name = "tbnRemain";
             this.tbnRemain.Size = new System.Drawing.Size(100, 23);
             this.tbnRemain.TabIndex = 28;
+            this.tbnRemain.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbnRemain_KeyPress);
             // 
             // label3
             // 

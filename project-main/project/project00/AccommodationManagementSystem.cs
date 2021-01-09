@@ -11,11 +11,15 @@ namespace project00
         Person person = null;
         int ID = -1;//b1 -1:choose nothing
         int id = -1;//b1 -1:choose nothing
+        int CustID = -1;
+
 
         public AccommodationManagementSystem(Person p)
         {
             InitializeComponent();
             person = p;
+            var person_ = (Customer)person;
+            CustID = person_.CustomerID;
         }
 
 
@@ -24,6 +28,7 @@ namespace project00
             if (person != null)
             {
                 lblWelcome.Text = "Hello " + person.Firstname;
+                
 
             }
         }
@@ -170,7 +175,9 @@ namespace project00
         {
             lblTitle.Text = "Payment Details";
             Payment obj = new Payment();
-            dgvData.DataSource = obj.GetPaymentInfo(id);
+            if(CustID>0)    
+              dgvData.DataSource = obj.GetPaymentInfo(CustID);
+            
             try
             {
                 UpdateBorder(((Button)sender).Name);
@@ -266,6 +273,7 @@ namespace project00
                     cust.Email = dt.Rows[0]["Email"].ToString();
                     cust.Password = dt.Rows[0]["Password"].ToString();
                     cust.Address = dt.Rows[0]["Address"].ToString();
+                    cust.PhoneNumber = dt.Rows[0]["Phone"].ToString();
                 }
 
                 EditCustForm Form = new EditCustForm((Customer)person, cust, "edit");
@@ -287,7 +295,7 @@ namespace project00
                 MessageBox.Show(ex.Message);
             }
 
-            MessageBox.Show("Your click edit");
+            //MessageBox.Show("Your click edit");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
