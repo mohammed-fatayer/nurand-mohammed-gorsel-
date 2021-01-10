@@ -72,12 +72,17 @@
     <Compile Include="accommodation\accommodationForm.Designer.cs">
       <DependentUpon>accommodationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="action.cs" />
     <Compile Include="AddAccForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddAccForm.Designer.cs">
       <DependentUpon>AddAccForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="advertisment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="advertisment.Designer.cs">
+      <DependentUpon>advertisment.cs</DependentUpon>
     </Compile>
     <Compile Include="customer1\customerForm.cs">
       <SubType>Form</SubType>
@@ -142,7 +147,6 @@
     <Compile Include="ownerforms\ownerform.Designer.cs">
       <DependentUpon>ownerform.cs</DependentUpon>
     </Compile>
-    <Compile Include="ownerforms\person.cs" />
     <Compile Include="payment\paymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +167,9 @@
     <Compile Include="Resources\backItems.Designer.cs">
       <DependentUpon>backItems.cs</DependentUpon>
     </Compile>
+    <Compile Include="slideranimation.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="AccommodationManagementSystem.resx">
       <DependentUpon>AccommodationManagementSystem.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddAccForm.resx">
       <DependentUpon>AddAccForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="advertisment.resx">
+      <DependentUpon>advertisment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="customer1\customerForm.resx">
       <DependentUpon>customerForm.cs</DependentUpon>

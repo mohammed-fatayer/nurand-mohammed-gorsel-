@@ -47,23 +47,33 @@ namespace project00
 
 
                 }
-                else
+             
+                if(comboBox1.Text == "customer")
                 {
-                    Customer c = new Customer();
-                    var result = c.Login(firstname, password);
-                    if (result != null)
+
+                    textBox2.Text = textBox2.Text.Replace(" ", "");
+                    if (textBox2.Text != "" && textBox1.Text != "")
                     {
-                        label3.ForeColor = Color.Green;
-                        label3.Text = ("you are in");
-                        this.Hide();
-                        AccommodationManagementSystem oform = new AccommodationManagementSystem(result);
-                        oform.Show();
+                        Customer c = new Customer();
+                        var result = c.Login(firstname, password);
+                        if (result != null)
+                        {
+                            label3.ForeColor = Color.Green;
+                            label3.Text = ("you are in");
+                            this.Hide();
+                            AccommodationManagementSystem oform = new AccommodationManagementSystem(result);
+                            oform.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("wrong infromation");
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("wrong infromation");
-                    }
+
+                   
                 }
+            
+
 
 
             }

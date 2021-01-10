@@ -47,7 +47,7 @@ namespace project00.model
             try
             {
                 //d3 cnt to DB
-                string connectionString = "Server = DESKTOP-IPUP7LB; Database = sms; Trusted_Connection = True";
+                connectionString = ConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString;
                 SqlConnection Connection = new SqlConnection(connectionString);
                 Connection.Open();
 

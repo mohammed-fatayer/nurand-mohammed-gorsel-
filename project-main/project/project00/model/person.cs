@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
+using System.Data.SqlClient;
 
 namespace project00.Models
 {
@@ -12,7 +14,7 @@ namespace project00.Models
         protected string password;
         protected string address;
         protected string phoneNumber;
-
+      
         protected static string connectionString;
 
 
@@ -41,7 +43,7 @@ namespace project00.Models
         public string Password { get => password; set => password = value; }
         public string Address { get => address; set => address = value; }
         public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
-
+   
 
         public void display()
         {
@@ -71,6 +73,7 @@ namespace project00.Models
                 throw new Exception("error in logout");
             }
         }
+       
     }
 
 

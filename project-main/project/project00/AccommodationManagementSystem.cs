@@ -20,6 +20,33 @@ namespace project00
             person = p;
             var person_ = (Customer)person;
             CustID = person_.CustomerID;
+            
+            label5.Text = CustID.ToString();
+            TextBox textBox1 = new TextBox();
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Interval = 3000;
+           timer.Elapsed += timer_Elapsed;
+            timer.Start();
+
+
+            TextBox.CheckForIllegalCrossThreadCalls = false;
+        }
+     
+         
+        private void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            Customer c = new Customer();
+            label1.Text = "";
+
+            for (int i = 0; i < c.getadd().Length; i++)
+            {
+                 
+                label1.Text = label1.Text +"|| "+ c.getadd()[i];
+
+
+            }
+
+
         }
 
 
@@ -29,6 +56,7 @@ namespace project00
             {
                 lblWelcome.Text = "Hello " + person.Firstname;
                 
+               
 
             }
         }
@@ -175,9 +203,9 @@ namespace project00
         {
             lblTitle.Text = "Payment Details";
             Payment obj = new Payment();
-            if(CustID>0)    
-              dgvData.DataSource = obj.GetPaymentInfo(CustID);
-            
+            if (CustID > 0)
+                dgvData.DataSource = obj.GetPaymentInfo(CustID);
+
             try
             {
                 UpdateBorder(((Button)sender).Name);
@@ -379,7 +407,7 @@ namespace project00
                         {
                             MessageBox.Show("Accommodation Deleted.");
 
-                            dgvData.DataSource = obj.GetAccInfo();
+                            //      dgvData.DataSource = obj.GetAccInfo();
                         }
                     }
                 }
@@ -391,6 +419,21 @@ namespace project00
             }
         }
 
+        private void eLearningSlidingLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            label1.Location = new Point(label1.Location.X - 1, label1.Location.Y);
+
+            if (label1.Location.X + label1.Width < 0)
+            {
+                label1.Location = new Point(this.Width, label1.Location.Y);
+            }
+        }
     }
 
 }

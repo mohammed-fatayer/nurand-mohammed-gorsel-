@@ -1,5 +1,6 @@
 ﻿using project00.model;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 namespace project00.Models
@@ -66,7 +67,7 @@ namespace project00.Models
                     if (dt.Rows.Count > 0)
                     {
                         Customer c = new Customer();
-                        c.customerID = int.Parse(dt.Rows[0][customerID].ToString());
+                        c.customerID = int.Parse(dt.Rows[0]["customerID"].ToString());
                         c.firstname = dt.Rows[0]["name"].ToString();
                         c.Email = dt.Rows[0]["Email"].ToString();
                         c.gender = dt.Rows[0]["Gender"].ToString();
@@ -223,5 +224,55 @@ namespace project00.Models
             }
 
         }
+        public String[] getadd()
+        {
+
+
+
+            try
+            {
+
+                var myList = new List<string>();
+                string[] str;
+                SqlConnection connection = new SqlConnection(connectionString);
+                SqlCommand command =
+  new SqlCommand($"select * from advertisment WHERE accommodationid=accommodationid", connection);
+
+                connection.Open();
+
+
+                SqlDataReader read = command.ExecuteReader();
+
+                while (read.Read())
+                {
+
+
+                    string massage = (read["comment"].ToString());
+
+
+
+
+                    myList.Add(massage);
+
+
+
+
+
+                }
+                str = myList.ToArray();
+
+                read.Close();
+                connection.Close();
+                return str;
+                ;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
+
 }

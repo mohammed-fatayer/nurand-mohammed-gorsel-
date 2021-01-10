@@ -32,7 +32,7 @@ namespace project00
 
 
 
-                    SqlCommand cmd = new SqlCommand("INSERT INTO massage " + "(massage,OwnerID,CustomerID)" + "values( @massage,@OwnerID,@CustomerID) ", connection);
+                    SqlCommand cmd = new SqlCommand($"INSERT INTO massage " + "(massage,OwnerID,CustomerID)" + "values( @massage,@OwnerID,@CustomerID) ", connection);
 
 
                     cmd.Parameters.Add("@massage", System.Data.SqlDbType.NVarChar);
@@ -94,7 +94,7 @@ namespace project00
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand("DELETE FROM [Massage] WHERE ownerid = ownerid and customerid = customerid", con))
+                    using (SqlCommand command = new SqlCommand($"DELETE FROM [Massage] WHERE ownerid = {ownerid} and customerid = {customerid}", con))
                     {
                         command.ExecuteNonQuery();
                     }
@@ -123,7 +123,8 @@ namespace project00
                 string[] str;
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand command =
-  new SqlCommand("select * from massage WHERE CustomerId=customerid and ownerid = ownerid", connection);
+  new SqlCommand($"select * from massage WHERE CustomerId={customerid} and ownerid = {ownerid}", connection);
+              
                 connection.Open();
 
 

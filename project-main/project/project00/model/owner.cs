@@ -26,6 +26,7 @@ namespace project00.Models
         }
 
 
+        
         public owner(int ownerID, string firstname, string lastname, string gendr, string email, string password, string address)
         {
             this.ownerID = ownerID;
@@ -42,6 +43,55 @@ namespace project00.Models
         public void Display()
         {
             Console.WriteLine($"ID{ownerID},name{firstname}");
+        }
+        public DataTable advertismet(string comment,string accommodationid)
+        {
+            try
+            {
+
+
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+
+
+
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO advertisment" + "(accommodationid,comment)" + "values(@accommodationid,@comment) ", connection);
+
+
+                    cmd.Parameters.Add("@comment", System.Data.SqlDbType.NVarChar);
+                    cmd.Parameters.Add("@accommodationid", System.Data.SqlDbType.NVarChar);
+                    
+                    cmd.Parameters["@comment"].Value = comment;
+                  
+                    cmd.Parameters["@accommodationid"].Value = accommodationid;
+
+
+                    int RowsAffected = cmd.ExecuteNonQuery();
+
+
+                    connection.Close();
+
+                    return null;
+
+                }
+                else
+                {
+                    throw new Exception("can't connect to server");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("error in adding new advertisment"+ ex.Message);
+
+
+            }
         }
 
         public DataTable newownerinfo(string firstname, string lastname, string email, string gender, string password, string address)
@@ -130,7 +180,7 @@ namespace project00.Models
                     if (dt.Rows.Count > 0)
                     {
                         owner o = new owner();
-                        o.ownerID = int.Parse(dt.Rows[0][ownerID].ToString());
+                        o.ownerID = int.Parse(dt.Rows[0]["ownerID"].ToString());
                         o.firstname = dt.Rows[0]["name"].ToString();
                         o.Email = dt.Rows[0]["Email"].ToString();
                         o.gender = dt.Rows[0]["Gender"].ToString();

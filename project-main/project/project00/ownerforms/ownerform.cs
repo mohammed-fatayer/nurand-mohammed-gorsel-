@@ -24,6 +24,9 @@ namespace project00
                 label1.Text = "Hello " + person.Firstname;
                 owner o = (owner)person;
                 BindAccData(o);
+                label3.Text = o.OwnerID.ToString();
+                 
+
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -136,19 +139,61 @@ namespace project00
             }
         }
 
-        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+       
+        private void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            var acc = new accommodation();
-            acc.Accommodation_selection = "Test";
-            acc.Details_accommodation = "Test Detail";
-            acc.Operation = "Test Operation";
-            acc.Price = 100;
-            acc.Period = 1;
-            acc.OwnerID = 4;
-            acc.CustomerID = 1;
+            try
+            {
+                if (ID == -1)
+                {
+                    return;
+                }
 
-            acc.AccommodationAdd(acc);
-            dataGridView1.DataSource = acc.GetAccInfo(0);
+               
+                    var dresult = MessageBox.Show("Are you sure?", "System Message", MessageBoxButtons.YesNo);
+
+                    if (dresult == DialogResult.Yes)
+                    {
+                        accommodation obj = new accommodation();
+                        var result = obj.AccommodationDelete(ID);
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Accommodation Deleted.");
+
+                            //      dgvData.DataSource = obj.GetAccInfo();
+                        }
+                    }
+              
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+  
+    private void button4_Click(object sender, EventArgs e)
+        {
+            if (ID == -1)
+            {
+                return;
+            }
+            accommodation a = new accommodation();
+            a.AccommodationDelete(ID);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            advertisment ad = new advertisment();
+            ad.Show();
+            
+         
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
