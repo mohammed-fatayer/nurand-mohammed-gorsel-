@@ -73,6 +73,16 @@ namespace project00.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_30px1 {
+            get {
+                object obj = ResourceManager.GetObject("add_30px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap advment {
             get {
                 object obj = ResourceManager.GetObject("advment", resourceCulture);
@@ -386,6 +396,16 @@ namespace project00.Properties {
         internal static System.Drawing.Bitmap send_30px {
             get {
                 object obj = ResourceManager.GetObject("send_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shutdown_30px {
+            get {
+                object obj = ResourceManager.GetObject("shutdown_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

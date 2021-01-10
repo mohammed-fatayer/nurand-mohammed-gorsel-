@@ -102,7 +102,7 @@ namespace project00
         {
 
             registrationform rform = new registrationform();
-            rform.Show();
+            rform.ShowDialog();
         }
 
         private void loginform_Load(object sender, EventArgs e)

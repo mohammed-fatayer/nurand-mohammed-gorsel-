@@ -22,7 +22,7 @@ namespace project00
 
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             if (textBox1.Text == "")
             {
@@ -53,7 +53,7 @@ namespace project00
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
 
             string ownerid = textBox3.Text;
@@ -101,5 +101,7 @@ namespace project00
         {
             this.Close();
         }
+
+        
     }
 }

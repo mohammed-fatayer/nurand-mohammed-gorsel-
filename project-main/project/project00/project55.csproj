@@ -167,9 +167,6 @@
     <Compile Include="Resources\backItems.Designer.cs">
       <DependentUpon>backItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="slideranimation.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <EmbeddedResource Include="AccommodationManagementSystem.resx">
       <DependentUpon>AccommodationManagementSystem.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,6 +366,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\send_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_30px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

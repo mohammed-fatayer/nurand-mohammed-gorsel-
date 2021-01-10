@@ -76,6 +76,45 @@ namespace project00
             CBgender.Text = "";
             mtPhone.Text = "";
         }
+
+        private void btnUpdateCust_Click(object sender, EventArgs e)
+        {
+            if (customerInfo.customerID > 0)
+            {
+                Customer cust = new Customer();
+                cust.Gender = CBgender.Text;
+                cust.Firstname = tbName.Text;
+                cust.Lastname = tbLastName.Text;
+                cust.Email = tbEmail.Text;
+                cust.Password = tbPassword.Text;
+                cust.PhoneNumber = mtPhone.Text;
+                cust.CustomerID = customerInfo.customerID;
+                if (actionForm != "" && actionForm == "edit")
+                    cust.CustomerEdit(cust);
+
+
+                ////Edit
+
+                //clearData();
+            }
+
+            this.Hide();
+        }
+
+        private void btnClear_Click_1(object sender, EventArgs e)
+        {
+            tbName.Text = "";
+            tbLastName.Text = "";
+            tbEmail.Text = "";
+            tbPassword.Text = "";
+            CBgender.Text = "";
+            mtPhone.Text = "";
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

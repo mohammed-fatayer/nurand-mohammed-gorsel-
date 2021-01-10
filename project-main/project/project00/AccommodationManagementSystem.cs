@@ -188,7 +188,7 @@ namespace project00
         {
             lblTitle.Text = "Accommodation Details";
             Payment obj = new Payment();
-            //dgvData.DataSource = obj.GetPaymentInfo();
+            dgvData.DataSource = obj.GetPaymentInfo(id);
             try
             {
                 UpdateBorder(((Button)sender).Name);
@@ -326,11 +326,6 @@ namespace project00
             //MessageBox.Show("Your click edit");
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //var acc = new accommodation();
@@ -436,6 +431,21 @@ namespace project00
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

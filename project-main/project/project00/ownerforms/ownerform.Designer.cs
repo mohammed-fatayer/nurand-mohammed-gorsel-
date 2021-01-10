@@ -36,7 +36,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -121,15 +120,6 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(12, 259);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(138, 35);
-            this.button8.TabIndex = 14;
-            this.button8.Text = "income";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(12, 211);
@@ -143,7 +133,7 @@
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(12, 317);
+            this.button10.Location = new System.Drawing.Point(12, 265);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(138, 66);
             this.button10.TabIndex = 16;
@@ -198,13 +188,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView1);
@@ -236,7 +225,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
