@@ -47,7 +47,7 @@ namespace project00.model
         {
             try
             {
-                string query = $"select *from payment where CustomersID = " + id;
+                string query = $"select TOP(7) e.CustomerID,d.AccommodationID,d.[Accommodation Selection],d.Details,d.Price as Price_TL, d.Operation,p.PaymentSelection,p.Status,p.Remain from customer e JOIN Accommodation d ON d.AccommodationID = d.AccommodationID JOIN payment p ON p.PaymentID = p.PaymentID where CustomersID = " + id;
                 return dbHelper.ExecuteQuery(query);  //its static, can call method direcly
             }
             catch (Exception ex)

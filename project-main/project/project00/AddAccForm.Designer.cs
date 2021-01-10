@@ -29,35 +29,30 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbAccSelect = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cbLocation = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbOperation = new System.Windows.Forms.ComboBox();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtPeriod = new System.Windows.Forms.TextBox();
+            this.txtDetail = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtDetail = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbAccSelect = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtOwnerID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtOwnerID);
+            this.groupBox1.BackColor = System.Drawing.Color.SkyBlue;
             this.groupBox1.Controls.Add(this.cbAccSelect);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.cbLocation);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label3);
@@ -71,12 +66,33 @@
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.txtDetail);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 413);
+            this.groupBox1.Size = new System.Drawing.Size(682, 414);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Accommodation Details";
+            // 
+            // cbAccSelect
+            // 
+            this.cbAccSelect.FormattingEnabled = true;
+            this.cbAccSelect.Items.AddRange(new object[] {
+            "Sale",
+            "Rent"});
+            this.cbAccSelect.Location = new System.Drawing.Point(232, 57);
+            this.cbAccSelect.Name = "cbAccSelect";
+            this.cbAccSelect.Size = new System.Drawing.Size(121, 32);
+            this.cbAccSelect.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 60);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(198, 24);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Accommodation type :";
             // 
             // comboBox1
             // 
@@ -91,28 +107,15 @@
             "7",
             "8",
             "9"});
-            this.comboBox1.Location = new System.Drawing.Point(232, 366);
+            this.comboBox1.Location = new System.Drawing.Point(232, 326);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 32);
             this.comboBox1.TabIndex = 22;
             // 
-            // cbLocation
-            // 
-            this.cbLocation.FormattingEnabled = true;
-            this.cbLocation.Items.AddRange(new object[] {
-            "USD ",
-            "TR",
-            "TH",
-            "URO"});
-            this.cbLocation.Location = new System.Drawing.Point(338, 232);
-            this.cbLocation.Name = "cbLocation";
-            this.cbLocation.Size = new System.Drawing.Size(54, 32);
-            this.cbLocation.TabIndex = 21;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(113, 366);
+            this.label5.Location = new System.Drawing.Point(113, 326);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 24);
             this.label5.TabIndex = 19;
@@ -165,15 +168,6 @@
             this.cbOperation.Size = new System.Drawing.Size(121, 32);
             this.cbOperation.TabIndex = 14;
             // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(513, 339);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(87, 42);
-            this.btnCancel.TabIndex = 13;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(232, 233);
@@ -189,25 +183,6 @@
             this.txtPeriod.Size = new System.Drawing.Size(100, 29);
             this.txtPeriod.TabIndex = 9;
             // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(620, 339);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(87, 42);
-            this.btnClear.TabIndex = 5;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(411, 339);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(87, 43);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Add";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // txtDetail
             // 
             this.txtDetail.Location = new System.Drawing.Point(232, 151);
@@ -216,47 +191,57 @@
             this.txtDetail.Size = new System.Drawing.Size(299, 76);
             this.txtDetail.TabIndex = 2;
             // 
-            // label4
+            // btnCancel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 60);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(198, 24);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Accommodation type :";
+            this.btnCancel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancel.Image = global::project00.Properties.Resources.close_sign_30px;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(577, 320);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(96, 42);
+            this.btnCancel.TabIndex = 13;
+            this.btnCancel.Text = "Close";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // cbAccSelect
+            // btnClear
             // 
-            this.cbAccSelect.FormattingEnabled = true;
-            this.cbAccSelect.Items.AddRange(new object[] {
-            "Sale",
-            "Rent"});
-            this.cbAccSelect.Location = new System.Drawing.Point(232, 57);
-            this.cbAccSelect.Name = "cbAccSelect";
-            this.cbAccSelect.Size = new System.Drawing.Size(121, 32);
-            this.cbAccSelect.TabIndex = 25;
+            this.btnClear.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnClear.Image = global::project00.Properties.Resources.delete_30px;
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(469, 320);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(87, 42);
+            this.btnClear.TabIndex = 5;
+            this.btnClear.Text = "Clear";
+            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // label7
+            // btnSave
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(105, 330);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 24);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Owner ID :";
-            // 
-            // txtOwnerID
-            // 
-            this.txtOwnerID.Location = new System.Drawing.Point(232, 327);
-            this.txtOwnerID.Name = "txtOwnerID";
-            this.txtOwnerID.Size = new System.Drawing.Size(100, 29);
-            this.txtOwnerID.TabIndex = 26;
+            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSave.Image = global::project00.Properties.Resources.add_30px;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(365, 320);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(87, 43);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Add";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // AddAccForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(706, 438);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddAccForm";
             this.Text = "AddAccForm";
@@ -281,10 +266,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbLocation;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtOwnerID;
         private System.Windows.Forms.ComboBox cbAccSelect;
         private System.Windows.Forms.Label label4;
     }

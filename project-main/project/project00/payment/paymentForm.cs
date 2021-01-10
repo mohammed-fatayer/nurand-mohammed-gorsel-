@@ -20,7 +20,7 @@ namespace project00
             {
                 if (pmt != null)
                 {
-                    tbnPaymentID.Text = pmt.PaymentID.ToString();
+                    //tbnPaymentID.Text = pmt.PaymentID.ToString();
                     dateTimePicker1.Value = pmt.PaymentDate;
                     rTbnSellerID.Text = pmt.OwnerID.ToString();
                     rTbnAccID.Text = pmt.AccommodationID.ToString();
@@ -84,7 +84,7 @@ namespace project00
         }
         private void ClearData()
         {
-            tbnPaymentID.Text = "";
+            //tbnPaymentID.Text = "";
             dateTimePicker1.Text = "";
             rTbnSellerID.Text = "";
             rTbnCustID.Text = "";
@@ -95,14 +95,58 @@ namespace project00
             tbnRemain.Text = "";
         }
 
-        private void tbnAmount_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void tbnRemain_KeyPress(object sender, KeyPressEventArgs e)
         {
             CheckKeyPress(sender, e);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (customerInfo.customerID > 0)
+            {
+                Payment pmt = new Payment();
+                pmt.PaymentID = customerInfo.CustomerID;
+                pmt.PaymentDate = dateTimePicker1.Value;
+                pmt.OwnerID = customerInfo.CustomerID;
+                pmt.AccommodationID = customerInfo.customerID;
+                pmt.CustomerID = customerInfo.CustomerID;
+                pmt.PaymentSelection = cbPaymentSelect.Text;
+                pmt.Amount = tbnAmount.Text == "" ? 0 : Convert.ToDecimal(tbnAmount.Text);
+                pmt.Status = tbnStatus.Text;
+                pmt.Remain = tbnRemain.Text == "" ? 0 : Convert.ToDecimal(tbnRemain.Text);
+                if (actionForm != "" && actionForm != "edit")
+                    pmt.PaymentAdd(pmt);
+                else
+                    //Edit
+
+                    ClearData();
+            }
+
+            this.Hide();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            dateTimePicker1.Text = "";
+            rTbnAccID.Text = "";
+            rTbnCustID.Text = "";
+            rTbnSellerID.Text = "";
+            cbPaymentSelect.Text = "";
+            tbnAmount.Text = ""; 
+            tbnStatus.Text = "";
+            tbnRemain.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -38,21 +38,6 @@ namespace project00
             }
         }
 
-        private void btnUpdateCust_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clearData()
-        {
-            tbName.Text = "";
-            tbLastName.Text = "";
-            tbEmail.Text = "";
-            tbPassword.Text = "";
-            CBgender.Text = "";
-            mtPhone.Text = "";
-        }
-
         private void btnUpdateCust_Click_1(object sender, EventArgs e)
         {
             if (customerInfo.customerID > 0)
@@ -67,14 +52,29 @@ namespace project00
                 cust.CustomerID = customerInfo.customerID;
                 if (actionForm != "" && actionForm == "edit")
                     cust.CustomerEdit(cust);
-                else
+               
 
-                    //Edit
+                    ////Edit
 
-                    clearData();
+                    //clearData();
             }
 
             this.Hide();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            tbName.Text = "";
+            tbLastName.Text = "";
+            tbEmail.Text = "";
+            tbPassword.Text = "";
+            CBgender.Text = "";
+            mtPhone.Text = "";
         }
     }
 }

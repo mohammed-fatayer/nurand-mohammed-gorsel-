@@ -352,6 +352,24 @@
   <ItemGroup>
     <None Include="Resources\new_message_40px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_sign_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_user_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registration_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_30px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>

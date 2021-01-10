@@ -29,29 +29,13 @@ namespace project00
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            tbName.Text = null;
-            tbLastName.Text = null;
-            tbEmail.Text = null;
-            tbPassword.Text = null;
-            tbAdress.Text = null;
-
-            comboBox1.Text = null;
-        }
-
         private void groupBox1_Enter(object sender, EventArgs e)
         {
             //showForm sform = new showForm();
             //sform.Show();
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             Customer c = new Customer();
             string firstname = tbName.Text.Trim();
@@ -74,6 +58,21 @@ namespace project00
             {
                 MessageBox.Show("wrong information");
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            tbName.Text = null;
+            tbLastName.Text = null;
+            tbEmail.Text = null;
+            tbPassword.Text = null;
+            tbAdress.Text = null;
+            comboBox1.Text = null;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

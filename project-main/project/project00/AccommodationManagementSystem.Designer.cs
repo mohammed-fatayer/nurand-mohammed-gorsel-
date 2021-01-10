@@ -97,15 +97,15 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer1.Panel2.Controls.Add(this.dgvData);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 248;
+            this.splitContainer1.Size = new System.Drawing.Size(884, 570);
+            this.splitContainer1.SplitterDistance = 274;
             this.splitContainer1.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(133, 72);
+            this.label5.Location = new System.Drawing.Point(115, 115);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(13, 18);
             this.label5.TabIndex = 22;
@@ -115,7 +115,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 74);
+            this.label4.Location = new System.Drawing.Point(34, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 21;
@@ -126,7 +126,7 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblWelcome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblWelcome.Location = new System.Drawing.Point(12, 43);
+            this.lblWelcome.Location = new System.Drawing.Point(12, 79);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(134, 20);
             this.lblWelcome.TabIndex = 0;
@@ -137,9 +137,9 @@
             this.panel2.BackColor = System.Drawing.Color.SkyBlue;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(3, 379);
+            this.panel2.Location = new System.Drawing.Point(36, 481);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(533, 66);
+            this.panel2.Size = new System.Drawing.Size(500, 86);
             this.panel2.TabIndex = 16;
             // 
             // label3
@@ -149,7 +149,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(302, 33);
+            this.label3.Location = new System.Drawing.Point(269, 53);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 17);
@@ -164,7 +164,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(193, 13);
+            this.label2.Location = new System.Drawing.Point(160, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(324, 17);
@@ -176,9 +176,9 @@
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Controls.Add(this.btnRefresh);
-            this.panel1.Location = new System.Drawing.Point(1, 149);
+            this.panel1.Location = new System.Drawing.Point(1, 172);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(544, 33);
+            this.panel1.Size = new System.Drawing.Size(723, 55);
             this.panel1.TabIndex = 15;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -196,10 +196,10 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.SkyBlue;
             this.flowLayoutPanel1.Controls.Add(this.button10);
             this.flowLayoutPanel1.Controls.Add(this.button6);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 32);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 55);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(1);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(547, 113);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(723, 172);
             this.flowLayoutPanel1.TabIndex = 10;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -207,10 +207,10 @@
             // 
             this.dgvData.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(3, 188);
+            this.dgvData.Location = new System.Drawing.Point(0, 231);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
-            this.dgvData.Size = new System.Drawing.Size(533, 185);
+            this.dgvData.Size = new System.Drawing.Size(603, 233);
             this.dgvData.TabIndex = 14;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             this.dgvData.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvData_CellMouseDown);
@@ -223,7 +223,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 34);
+            this.panel3.Size = new System.Drawing.Size(884, 67);
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -234,7 +234,7 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(367, 5);
+            this.label1.Location = new System.Drawing.Point(80, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 26);
             this.label1.TabIndex = 0;
@@ -292,7 +292,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.button1.Image = global::project00.Properties.Resources.sign_out_40px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(16, 379);
+            this.button1.Location = new System.Drawing.Point(16, 427);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(222, 50);
             this.button1.TabIndex = 20;
@@ -305,7 +305,7 @@
             this.button4.BackColor = System.Drawing.Color.PowderBlue;
             this.button4.Image = global::project00.Properties.Resources.mobile_payment_40px;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(16, 228);
+            this.button4.Location = new System.Drawing.Point(16, 276);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(222, 62);
             this.button4.TabIndex = 18;
@@ -318,7 +318,7 @@
             this.button2.BackColor = System.Drawing.Color.PowderBlue;
             this.button2.Image = global::project00.Properties.Resources.new_message_40px;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(16, 293);
+            this.button2.Location = new System.Drawing.Point(16, 341);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(222, 52);
             this.button2.TabIndex = 17;
@@ -331,7 +331,7 @@
             this.btdetails.BackColor = System.Drawing.Color.PowderBlue;
             this.btdetails.Image = global::project00.Properties.Resources.purchase_order_40px;
             this.btdetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btdetails.Location = new System.Drawing.Point(16, 174);
+            this.btdetails.Location = new System.Drawing.Point(16, 222);
             this.btdetails.Name = "btdetails";
             this.btdetails.Size = new System.Drawing.Size(222, 51);
             this.btdetails.TabIndex = 16;
@@ -344,7 +344,7 @@
             this.bthome.BackColor = System.Drawing.Color.PowderBlue;
             this.bthome.Image = global::project00.Properties.Resources.house_40px;
             this.bthome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bthome.Location = new System.Drawing.Point(16, 111);
+            this.bthome.Location = new System.Drawing.Point(16, 159);
             this.bthome.Name = "bthome";
             this.bthome.Size = new System.Drawing.Size(222, 57);
             this.bthome.TabIndex = 12;
@@ -359,7 +359,7 @@
             this.btnRefresh.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnRefresh.Image = global::project00.Properties.Resources.refresh_30px;
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefresh.Location = new System.Drawing.Point(462, 0);
+            this.btnRefresh.Location = new System.Drawing.Point(604, 11);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(73, 33);
             this.btnRefresh.TabIndex = 14;
@@ -414,9 +414,9 @@
             // 
             // AccommodationManagementSystem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(884, 570);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.splitContainer1);
             this.Name = "AccommodationManagementSystem";

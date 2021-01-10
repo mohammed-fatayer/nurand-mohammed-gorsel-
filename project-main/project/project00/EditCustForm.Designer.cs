@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.mtPhone = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.CBgender = new System.Windows.Forms.ComboBox();
@@ -41,25 +44,79 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnUpdateCust = new System.Windows.Forms.Button();
-            this.Update = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnCancel);
+            this.groupBox1.Controls.Add(this.btnClear);
+            this.groupBox1.Controls.Add(this.mtPhone);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.CBgender);
+            this.groupBox1.Controls.Add(this.tbPassword);
+            this.groupBox1.Controls.Add(this.tbEmail);
+            this.groupBox1.Controls.Add(this.tbLastName);
+            this.groupBox1.Controls.Add(this.tbName);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.btnUpdateCust);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.groupBox1.Location = new System.Drawing.Point(13, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(489, 362);
+            this.groupBox1.TabIndex = 51;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Update Customer Information";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancel.Image = global::project00.Properties.Resources.close_sign_30px;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(321, 294);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(103, 42);
+            this.btnCancel.TabIndex = 65;
+            this.btnCancel.Text = "Close";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnClear.Image = global::project00.Properties.Resources.delete_30px;
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(213, 294);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(89, 42);
+            this.btnClear.TabIndex = 64;
+            this.btnClear.Text = "Clear";
+            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClear.UseVisualStyleBackColor = false;
             // 
             // mtPhone
             // 
-            this.mtPhone.Location = new System.Drawing.Point(204, 263);
+            this.mtPhone.Location = new System.Drawing.Point(211, 242);
             this.mtPhone.Mask = "(999) 000-0000";
             this.mtPhone.Name = "mtPhone";
-            this.mtPhone.Size = new System.Drawing.Size(134, 20);
-            this.mtPhone.TabIndex = 47;
+            this.mtPhone.Size = new System.Drawing.Size(156, 26);
+            this.mtPhone.TabIndex = 63;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label4.Location = new System.Drawing.Point(103, 263);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(93, 242);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 17);
-            this.label4.TabIndex = 46;
+            this.label4.Size = new System.Drawing.Size(64, 17);
+            this.label4.TabIndex = 62;
             this.label4.Text = "Phone: ";
             // 
             // CBgender
@@ -68,146 +125,130 @@
             this.CBgender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.CBgender.Location = new System.Drawing.Point(204, 150);
+            this.CBgender.Location = new System.Drawing.Point(211, 129);
             this.CBgender.Name = "CBgender";
-            this.CBgender.Size = new System.Drawing.Size(134, 21);
-            this.CBgender.TabIndex = 45;
+            this.CBgender.Size = new System.Drawing.Size(156, 28);
+            this.CBgender.TabIndex = 61;
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(205, 225);
+            this.tbPassword.Location = new System.Drawing.Point(212, 204);
             this.tbPassword.Multiline = true;
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(133, 24);
-            this.tbPassword.TabIndex = 44;
+            this.tbPassword.Size = new System.Drawing.Size(154, 24);
+            this.tbPassword.TabIndex = 60;
             this.tbPassword.UseSystemPasswordChar = true;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(205, 185);
+            this.tbEmail.Location = new System.Drawing.Point(212, 164);
             this.tbEmail.Multiline = true;
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(133, 24);
-            this.tbEmail.TabIndex = 43;
+            this.tbEmail.Size = new System.Drawing.Size(154, 24);
+            this.tbEmail.TabIndex = 59;
             // 
             // tbLastName
             // 
-            this.tbLastName.Location = new System.Drawing.Point(205, 112);
+            this.tbLastName.Location = new System.Drawing.Point(212, 91);
             this.tbLastName.Multiline = true;
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(133, 24);
-            this.tbLastName.TabIndex = 42;
+            this.tbLastName.Size = new System.Drawing.Size(154, 24);
+            this.tbLastName.TabIndex = 58;
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(205, 74);
+            this.tbName.Location = new System.Drawing.Point(212, 53);
             this.tbName.Multiline = true;
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(133, 24);
-            this.tbName.TabIndex = 41;
+            this.tbName.Size = new System.Drawing.Size(154, 24);
+            this.tbName.TabIndex = 57;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label7.Location = new System.Drawing.Point(103, 225);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(93, 204);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 17);
-            this.label7.TabIndex = 40;
+            this.label7.Size = new System.Drawing.Size(82, 17);
+            this.label7.TabIndex = 56;
             this.label7.Text = "Password:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label6.Location = new System.Drawing.Point(103, 190);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(93, 169);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
-            this.label6.TabIndex = 39;
+            this.label6.Size = new System.Drawing.Size(52, 17);
+            this.label6.TabIndex = 55;
             this.label6.Text = "Email:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label8.Location = new System.Drawing.Point(103, 155);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(93, 134);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 17);
-            this.label8.TabIndex = 38;
+            this.label8.Size = new System.Drawing.Size(72, 17);
+            this.label8.TabIndex = 54;
             this.label8.Text = "Gender: ";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label9.Location = new System.Drawing.Point(103, 119);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(93, 98);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 17);
-            this.label9.TabIndex = 37;
+            this.label9.Size = new System.Drawing.Size(90, 17);
+            this.label9.TabIndex = 53;
             this.label9.Text = "Last Name:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label10.Location = new System.Drawing.Point(103, 77);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(93, 56);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 17);
-            this.label10.TabIndex = 36;
+            this.label10.Size = new System.Drawing.Size(96, 17);
+            this.label10.TabIndex = 52;
             this.label10.Text = "First Name: ";
             // 
             // btnUpdateCust
             // 
-            this.btnUpdateCust.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnUpdateCust.Location = new System.Drawing.Point(164, 320);
+            this.btnUpdateCust.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnUpdateCust.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUpdateCust.Image = global::project00.Properties.Resources.update_user_30px;
+            this.btnUpdateCust.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateCust.Location = new System.Drawing.Point(96, 294);
             this.btnUpdateCust.Name = "btnUpdateCust";
-            this.btnUpdateCust.Size = new System.Drawing.Size(105, 37);
-            this.btnUpdateCust.TabIndex = 35;
+            this.btnUpdateCust.Size = new System.Drawing.Size(103, 42);
+            this.btnUpdateCust.TabIndex = 51;
             this.btnUpdateCust.Text = "Update";
+            this.btnUpdateCust.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdateCust.UseVisualStyleBackColor = false;
-            this.btnUpdateCust.Click += new System.EventHandler(this.btnUpdateCust_Click_1);
-            // 
-            // Update
-            // 
-            this.Update.AutoSize = true;
-            this.Update.BackColor = System.Drawing.SystemColors.Control;
-            this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update.ForeColor = System.Drawing.Color.Black;
-            this.Update.Location = new System.Drawing.Point(100, 26);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(266, 25);
-            this.Update.TabIndex = 34;
-            this.Update.Text = "Update Customer Information";
             // 
             // EditCustForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 450);
-            this.Controls.Add(this.mtPhone);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.CBgender);
-            this.Controls.Add(this.tbPassword);
-            this.Controls.Add(this.tbEmail);
-            this.Controls.Add(this.tbLastName);
-            this.Controls.Add(this.tbName);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.btnUpdateCust);
-            this.Controls.Add(this.Update);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(523, 389);
+            this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "EditCustForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditCustForm";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.MaskedTextBox mtPhone;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CBgender;
@@ -221,6 +262,5 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnUpdateCust;
-        private new System.Windows.Forms.Label Update;
     }
 }

@@ -25,7 +25,7 @@ namespace project00
                     txtDetail.Text = acc.Details_accommodation;
                     txtPrice.Text = acc.Price.ToString();
                     txtPrice.Text = acc.Period.ToString();
-                    txtOwnerID.Text = acc.OwnerID.ToString();
+                    //txtOwnerID.Text = acc.OwnerID.ToString();
 
                     actionForm = action;
                 }
@@ -50,10 +50,10 @@ namespace project00
                 acc.OwnerID = ownerInfo.OwnerID;
                 if (actionForm != "" && actionForm != "edit")
                     acc.AccommodationAdd(acc);
-                else
+               // else
                     //Edit
 
-                    ClearData();
+                    //ClearData();
             }
 
 
@@ -61,16 +61,19 @@ namespace project00
 
         }
 
-        private void ClearData()
+        private void btnClear_Click(object sender, EventArgs e)
         {
             cbAccSelect.Text = "";
             cbOperation.Text = "";
             txtDetail.Text = "";
             txtPrice.Text = "";
             txtPeriod.Text = "";
-            txtOwnerID.Text = "";
+            //txtOwnerID.Text = "";
         }
 
-
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
