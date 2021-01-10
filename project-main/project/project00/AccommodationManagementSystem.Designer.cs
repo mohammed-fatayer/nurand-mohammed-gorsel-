@@ -383,7 +383,7 @@
             this.button10.Margin = new System.Windows.Forms.Padding(24);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(0, 16, 0, 8);
-            this.button10.Size = new System.Drawing.Size(164, 82);
+            this.button10.Size = new System.Drawing.Size(175, 82);
             this.button10.TabIndex = 3;
             this.button10.Text = "Customer";
             this.button10.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -401,7 +401,7 @@
             this.button6.Image = global::project00.Properties.Resources.house_48px1;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button6.Location = new System.Drawing.Point(236, 24);
+            this.button6.Location = new System.Drawing.Point(247, 24);
             this.button6.Margin = new System.Windows.Forms.Padding(24);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(0, 16, 0, 8);
