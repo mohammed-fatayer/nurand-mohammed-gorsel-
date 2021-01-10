@@ -434,6 +434,11 @@ namespace project00
                 label1.Location = new Point(this.Width, label1.Location.Y);
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

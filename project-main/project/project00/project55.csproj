@@ -257,6 +257,7 @@
     <None Include="Resources\icons8-clear-formatting-40.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="CustomerHome\" />
     <Folder Include="databse\" />
   </ItemGroup>
   <ItemGroup>
@@ -326,6 +327,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\house_48px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile_payment_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile_payment_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase_order_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_message_40px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
